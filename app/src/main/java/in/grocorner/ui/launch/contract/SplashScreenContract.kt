@@ -6,7 +6,7 @@ interface SplashScreenContract {
         fun gotoOnBoardActivity()
     }
 
-    interface ViewModel {
+    interface Presenter {
         fun navigateToNextScreen()
     }
 

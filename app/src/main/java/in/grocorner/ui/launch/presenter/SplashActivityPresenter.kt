@@ -1,10 +1,10 @@
-package `in`.grocorner.ui.launch.viewmodel
+package `in`.grocorner.ui.launch.presenter
 
 import `in`.grocorner.ui.launch.contract.SplashScreenContract
 import android.os.Handler
 import android.os.Looper
 
-class SplashActivityViewModel(private val view: SplashScreenContract.View) : SplashScreenContract.ViewModel {
+class SplashActivityPresenter(private val view: SplashScreenContract.View) : SplashScreenContract.Presenter {
 
     override fun navigateToNextScreen() {
         //If first time login then else navigate to home screen
