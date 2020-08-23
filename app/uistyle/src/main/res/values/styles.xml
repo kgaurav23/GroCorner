@@ -7,10 +7,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="FullScreenTheme" parent="Theme">
+    <style name="FullScreenTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
-        <item name="android:fontFamily">@font/montserrat_bold</item>
+<!--        <item name="android:fontFamily">@font/montserrat_bold</item>-->
     </style>
 
 </resources>
