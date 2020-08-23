@@ -11,14 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name=".ui.launch.activity.OnBoardingActivity"></activity>
-        <activity android:name=".ui.launch.activity.SplashActivity">
+
+        <activity android:name=".ui.launch.activity.SplashActivity"
+            android:theme="@style/FullScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".ui.launch.activity.OnBoardingActivity" />
     </application>
 
 </manifest>
