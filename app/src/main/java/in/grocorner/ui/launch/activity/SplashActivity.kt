@@ -6,6 +6,7 @@ import `in`.grocorner.ui.launch.navigator.LaunchScreenNavigator
 import `in`.grocorner.ui.launch.viewmodel.SplashActivityViewModel
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.ContextCompat
 
 class SplashActivity : AppCompatActivity(), SplashScreenContract.View {
 
@@ -14,6 +15,7 @@ class SplashActivity : AppCompatActivity(), SplashScreenContract.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+        window.statusBarColor = ContextCompat.getColor(this, R.color.colorAccent)
 
         viewModel = SplashActivityViewModel(this)
         viewModel.navigateToNextScreen()

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_large">16dp</dimen>
+    <dimen name="space_2x_large">36dp</dimen>
+    <dimen name="space_3x_large">48dp</dimen>
+    <dimen name="space_4x_large">64dp</dimen>
+</resources>

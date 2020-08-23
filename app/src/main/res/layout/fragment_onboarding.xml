@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/off_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/onBoardingLogo"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="@dimen/space_4x_large"
+        android:src="@drawable/grocorner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/onBoardingHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="@id/onBoardingLogo"
+        app:layout_constraintStart_toStartOf="@id/onBoardingLogo"
+        app:layout_constraintTop_toBottomOf="@id/onBoardingLogo"
+        android:text="EXPLORE" />
+
+    <TextView
+        android:id="@+id/onBoardingSubHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/textColorGray"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/space_large"
+        android:layout_marginStart="@dimen/space_4x_large"
+        android:layout_marginEnd="@dimen/space_4x_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/onBoardingHeader"
+        android:text="Find product for your home easily by swipe and scroll" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/gradient"
+        android:layout_marginTop="@dimen/space_3x_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_round"
+        app:layout_constraintTop_toBottomOf="@+id/view_round" />
+
+    <View
+        android:id="@+id/view_round"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/round_shape"
+        android:layout_marginTop="@dimen/space_4x_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onBoardingSubHeader" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="8dp"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_round"
+        app:layout_constraintBottom_toBottomOf="@id/view_round">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/gradient"
+            android:paddingTop="@dimen/space_large"
+            android:paddingBottom="@dimen/space_large"
+            android:paddingStart="@dimen/space_2x_large"
+            android:paddingEnd="@dimen/space_large"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/off_white"
+                android:text="GET STARTED"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_large"
+                android:src="@drawable/ic_arrow_right"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
