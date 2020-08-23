@@ -13,8 +13,8 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
 
     private lateinit var loginPresenter: LoginPresenter
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
         loginPresenter = LoginPresenter(this)
