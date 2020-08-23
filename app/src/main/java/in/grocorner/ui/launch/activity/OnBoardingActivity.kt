@@ -2,8 +2,8 @@ package `in`.grocorner.ui.launch.activity
 
 import `in`.grocorner.R
 import `in`.grocorner.ui.launch.fragment.OnBoardingFragment
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -14,7 +14,7 @@ class OnBoardingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_on_boarding)
-        window.statusBarColor = ContextCompat.getColor(this, R.color.colorAccent)
+        window.statusBarColor = ContextCompat.getColor(this, R.color.colorPrimaryDark)
 
         initViews()
     }
