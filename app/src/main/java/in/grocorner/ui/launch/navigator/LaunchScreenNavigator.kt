@@ -4,7 +4,7 @@ import `in`.grocorner.ui.launch.activity.OnBoardingActivity
 import android.content.Context
 import android.content.Intent
 
-class Navigator {
+class LaunchScreenNavigator {
 
     companion object {
         fun navigateToOnBoardingActivity(context: Context) {
