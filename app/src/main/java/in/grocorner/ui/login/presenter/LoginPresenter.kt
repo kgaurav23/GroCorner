@@ -10,10 +10,6 @@ class LoginPresenter(private val loginView: LoginContract.View) : LoginContract.
         // Call Send OTP API here
     }
 
-    override fun validateOTP() {
-        // Call validate OTP API here
-    }
-
     override fun isValidInput(mobileNumber: String): Boolean {
         if (mobileNumber.isBlank()) {
             loginView.showMobileErrorMessage(

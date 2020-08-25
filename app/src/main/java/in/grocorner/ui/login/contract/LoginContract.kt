@@ -15,6 +15,5 @@ interface LoginContract {
     interface Presenter {
         fun isValidInput(mobileNumber: String): Boolean
         fun sendOTP()
-        fun validateOTP()
     }
 }
