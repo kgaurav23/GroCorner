@@ -7,4 +7,5 @@
     <string name="login_button_text">Login Using OTP</string>
     <string name="login_text">Login</string>
     <string name="mobile_number_hint">Mobile Number</string>
+    <string name="sign_up_using_otp">Sign-up using OTP</string>
 </resources>

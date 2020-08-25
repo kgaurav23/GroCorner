@@ -24,6 +24,11 @@
         <item name="android:color">@color/colorPrimaryDark</item>
     </style>
 
+    <style name="TextStyle.Normal">
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:color">@color/colorPrimaryDark</item>
+    </style>
+
     <style name="TextStyle.Light">
         <item name="android:fontFamily">@font/montserrat_bold</item>
     </style>
