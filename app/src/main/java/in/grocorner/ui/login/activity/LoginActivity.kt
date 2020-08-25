@@ -1,10 +1,9 @@
 package `in`.grocorner.ui.login.activity
 
 import `in`.grocorner.R
-import `in`.grocorner.ui.launch.navigator.LaunchScreenNavigator
 import `in`.grocorner.ui.login.contract.LoginContract
-import `in`.grocorner.ui.login.navigator.LoginNavigator
 import `in`.grocorner.ui.login.presenter.LoginPresenter
+import `in`.grocorner.ui.navigator.AppNavigator
 import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -24,7 +23,7 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
 
         login_button.setOnClickListener {
             if (loginPresenter.isValidInput(mobile_number_edit_text.text.toString())) {
-                LaunchScreenNavigator.navigateToOnBoardingActivity(this)
+                AppNavigator.navigateToOnBoardingActivity(this)
             }
         }
 
@@ -46,7 +45,7 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
     }
 
     override fun navigateToSRPActivity() {
-        LoginNavigator.navigateToSRPActivity(this)
+        AppNavigator.navigateToSRPActivity(this)
     }
 
     override fun getContext(): Context {

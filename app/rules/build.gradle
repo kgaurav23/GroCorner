@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
@@ -7,13 +7,13 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "in.grocorner"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -26,7 +26,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-
-    implementation project(":app:uistyle")
-    lintChecks project(path: ':app:rules')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.1'
+    compileOnly "com.android.tools.lint:lint-api:27.0.1"
+    compileOnly "com.android.tools.lint:lint-checks:27.0.1"
 }

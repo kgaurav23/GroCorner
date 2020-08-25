@@ -9,4 +9,6 @@
 
     <color name="textColorGray">#777777</color>
     <color name="off_white">#fff9f0</color>
+
+    <color name="dusky_blue">#465986</color>
 </resources>

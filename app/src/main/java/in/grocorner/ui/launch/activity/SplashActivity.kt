@@ -2,8 +2,8 @@ package `in`.grocorner.ui.launch.activity
 
 import `in`.grocorner.R
 import `in`.grocorner.ui.launch.contract.SplashScreenContract
-import `in`.grocorner.ui.launch.navigator.LaunchScreenNavigator
 import `in`.grocorner.ui.launch.presenter.SplashActivityPresenter
+import `in`.grocorner.ui.navigator.AppNavigator
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -22,6 +22,6 @@ class SplashActivity : AppCompatActivity(), SplashScreenContract.View {
     }
 
     override fun gotoOnBoardActivity() {
-        LaunchScreenNavigator.navigateToOnBoardingActivity(this)
+        AppNavigator.navigateToOnBoardingActivity(this)
     }
 }
