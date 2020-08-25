@@ -28,5 +28,4 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
     implementation project(":app:uistyle")
-    lintChecks project(path: ':app:rules')
 }
