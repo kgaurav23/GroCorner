@@ -2,8 +2,8 @@ package `in`.grocorner.ui.launch.activity
 
 import `in`.grocorner.R
 import `in`.grocorner.ui.launch.fragment.OnBoardingFragment
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -35,6 +35,6 @@ class OnBoardingActivity : AppCompatActivity() {
     private inner class OnBoardingPagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
         override fun getItemCount(): Int = 3
 
-        override fun createFragment(position: Int): Fragment = OnBoardingFragment()
+        override fun createFragment(position: Int): Fragment = OnBoardingFragment.newInstance(position)
     }
 }
