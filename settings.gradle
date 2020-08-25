@@ -1,4 +1,4 @@
-include ':app:rules'
+include ':rules'
 include ':app:uistyle'
 include ':app'
 rootProject.name = "Gro Corner"

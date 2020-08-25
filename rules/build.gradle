@@ -1,0 +1,28 @@
+apply plugin: 'kotlin'
+
+targetCompatibility = JavaVersion.VERSION_1_7
+sourceCompatibility = JavaVersion.VERSION_1_7
+
+configurations {
+    lintChecks
+}
+
+dependencies {
+    compile 'com.android.tools.lint:lint-api:27.0.1'
+    compile 'com.android.tools.lint:lint-checks:27.0.1'
+
+    lintChecks files(jar)
+}
+
+jar {
+    manifest {
+        attributes('Lint-Registry': 'in.grocorner.rules.IssueRegistry')
+    }
+}
+
+defaultTasks 'assemble'
+
+task install(type: Copy, dependsOn: build) {
+    from configurations.lintChecks
+    into System.getProperty('user.home') + '/.android/lint/'
+}
