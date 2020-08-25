@@ -14,7 +14,7 @@ class OnBoardingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_on_boarding)
-        window.statusBarColor = ContextCompat.getColor(this, R.color.colorAccent)
+        window.statusBarColor = ContextCompat.getColor(this, R.color.colorPrimaryDark)
 
         initViews()
     }

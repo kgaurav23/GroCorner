@@ -11,6 +11,7 @@
         android:id="@+id/close_login_screen_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
         android:padding="25dp"
         android:src="@android:drawable/ic_menu_close_clear_cancel"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,8 +22,8 @@
         android:id="@+id/grocorner_logo_card"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="8dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="30dp"
         app:cardPreventCornerOverlap="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,8 +38,10 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/login_container_cardview"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:cardCornerRadius="30dp"
+        android:layout_height="220dp"
+        android:animateLayoutChanges="true"
+        android:background="@color/off_white"
+        app:cardCornerRadius="45dp"
         app:cardElevation="8dp"
         app:cardPreventCornerOverlap="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,20 +50,25 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/name_text_input"
+            android:id="@+id/mobile_number_input"
             style="@style/TextInputLayoutStyle"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
             app:errorEnabled="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/name_edit_text"
+                android:id="@+id/mobile_number_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/mobile_number_hint"
-                android:inputType="textEmailAddress"
+                android:inputType="phone"
+                android:maxLength="10"
                 android:tag="email" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -84,8 +92,9 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="60dp"
+        android:background="@color/off_white"
         app:cardCornerRadius="28dp"
         app:cardElevation="18dp"
         app:cardPreventCornerOverlap="true"
@@ -93,6 +102,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/login_container_cardview">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/login_text"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
     </androidx.cardview.widget.CardView>
 
