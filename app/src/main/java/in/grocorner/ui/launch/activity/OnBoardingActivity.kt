@@ -9,6 +9,8 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.airbnb.lottie.LottieDrawable
+import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_on_boarding.*
 
 class OnBoardingActivity : AppCompatActivity() {
@@ -18,6 +20,9 @@ class OnBoardingActivity : AppCompatActivity() {
         window.statusBarColor = ContextCompat.getColor(this, R.color.colorPrimaryDark)
 
         initViews()
+
+        swipe_left_animation.repeatCount = LottieDrawable.INFINITE
+        swipe_left_animation.playAnimation()
     }
 
     override fun onBackPressed() {
@@ -31,6 +36,9 @@ class OnBoardingActivity : AppCompatActivity() {
     private fun initViews() {
         val pagerAdapter = OnBoardingPagerAdapter(this)
         onBoardingViewPager.adapter = pagerAdapter
+
+        TabLayoutMediator(on_boarding_tab_layout, onBoardingViewPager)
+        { tab, position -> }.attach()
     }
 
     private inner class OnBoardingPagerAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
