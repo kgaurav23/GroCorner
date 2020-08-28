@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/off_white"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:background="@color/off_white">
 
     <ImageView
         android:id="@+id/onBoardingLogo"
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:layout_marginTop="@dimen/space_4x_large"
-        android:src="@drawable/grocorner"
+        android:src="@drawable/ic_explore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,46 +21,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_bold"
+        android:textAllCaps="true"
+        android:textColor="@color/on_boarding_header_color"
         android:textSize="24sp"
-        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="@id/onBoardingLogo"
         app:layout_constraintStart_toStartOf="@id/onBoardingLogo"
         app:layout_constraintTop_toBottomOf="@id/onBoardingLogo"
-        android:text="EXPLORE" />
+        tools:text="EXPLORE" />
 
     <TextView
         android:id="@+id/onBoardingSubHeader"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_4x_large"
+        android:layout_marginTop="@dimen/space_large"
+        android:layout_marginEnd="@dimen/space_4x_large"
         android:fontFamily="@font/montserrat"
+        android:gravity="center"
         android:textColor="@color/textColorGray"
         android:textSize="14sp"
-        android:gravity="center"
-        android:layout_marginTop="@dimen/space_large"
-        android:layout_marginStart="@dimen/space_4x_large"
-        android:layout_marginEnd="@dimen/space_4x_large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/onBoardingHeader"
-        android:text="Find product for your home easily by swipe and scroll" />
+        tools:text="Find product for your home easily by swipe and scroll" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@drawable/gradient"
         android:layout_marginTop="@dimen/space_3x_large"
+        android:background="@drawable/gradient"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/view_round"
-        app:layout_constraintTop_toBottomOf="@+id/view_round" />
+        app:layout_constraintTop_toBottomOf="@+id/view_round"
+        app:layout_constraintTop_toTopOf="@id/view_round" />
 
     <View
         android:id="@+id/view_round"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@drawable/round_shape"
         android:layout_marginTop="@dimen/space_4x_large"
+        android:background="@drawable/round_shape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/onBoardingSubHeader" />
@@ -71,31 +72,35 @@
         app:cardCornerRadius="30dp"
         app:cardElevation="8dp"
         app:cardPreventCornerOverlap="true"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/view_round"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_round"
-        app:layout_constraintBottom_toBottomOf="@id/view_round">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_round">
+
         <LinearLayout
+            android:id="@+id/get_started_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
             android:background="@drawable/gradient"
-            android:paddingTop="@dimen/space_large"
-            android:paddingBottom="@dimen/space_large"
+            android:gravity="center"
+            android:orientation="horizontal"
             android:paddingStart="@dimen/space_2x_large"
+            android:paddingTop="@dimen/space_large"
             android:paddingEnd="@dimen/space_large"
-            android:orientation="horizontal">
+            android:paddingBottom="@dimen/space_large">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/off_white"
-                android:text="GET STARTED"/>
+                android:text="@string/on_boarding_get_started_text"
+                android:textAllCaps="true"
+                android:textColor="@color/off_white" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/space_large"
-                android:src="@drawable/ic_arrow_right"/>
+                android:src="@drawable/ic_arrow_right" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,4 +8,13 @@
     <string name="login_text">Login</string>
     <string name="mobile_number_hint">Mobile Number</string>
     <string name="sign_up_using_otp">Sign-up using OTP</string>
+
+    <string name="on_boarding_explore_header">Explore</string>
+    <string name="on_boarding_explore_sub_header">Find product for your home easily by swipe and scroll</string>
+    <string name="on_boarding_payment_header">Pay It</string>
+    <string name="on_boarding_payment_sub_header">Process payment for your purchased items with your favourite payment method</string>
+    <string name="on_boarding_delivery_header">Fast Delivery</string>
+    <string name="on_boarding_delivery_sub_header">Within our dedicated delivery partner you\'ll get your items fast</string>
+    <string name="on_boarding_get_started_text">Get Started</string>
+
 </resources>

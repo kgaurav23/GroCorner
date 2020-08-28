@@ -12,5 +12,4 @@ class SplashActivityPresenter(private val view: SplashScreenContract.View) : Spl
             view.gotoOnBoardActivity()
         }, 3000)
     }
-
 }
