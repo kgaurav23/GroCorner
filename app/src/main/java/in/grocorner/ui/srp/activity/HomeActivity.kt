@@ -6,13 +6,13 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.srp_screen_layout.*
+import kotlinx.android.synthetic.main.home_screen_layout.*
 
-class SRPActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_srp)
+        setContentView(R.layout.activity_home)
         window.statusBarColor = ContextCompat.getColor(this, R.color.off_white)
 
         setupBottomNavigationMenuItemClickListener()

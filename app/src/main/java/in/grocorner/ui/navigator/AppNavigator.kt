@@ -3,7 +3,7 @@ package `in`.grocorner.ui.navigator
 import `in`.grocorner.ui.launch.activity.OnBoardingActivity
 import `in`.grocorner.ui.login.activity.LoginActivity
 import `in`.grocorner.ui.login.activity.OTPActivity
-import `in`.grocorner.ui.srp.activity.SRPActivity
+import `in`.grocorner.ui.srp.activity.HomeActivity
 import android.content.Context
 import android.content.Intent
 
@@ -18,7 +18,7 @@ object AppNavigator {
     }
 
     fun navigateToSRPActivity(context: Context) {
-        context.startActivity(Intent(context, SRPActivity::class.java))
+        context.startActivity(Intent(context, HomeActivity::class.java))
     }
 
     fun navigateToLoginActivity(context: Context) {
