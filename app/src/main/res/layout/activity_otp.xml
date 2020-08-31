@@ -142,7 +142,7 @@
                 app:layout_constraintTop_toBottomOf="@id/txt_otp_not_reached" />
 
             <com.animation.animpresseffect.PressEffectButton
-                android:id="@+id/login_button"
+                android:id="@+id/login_using_otp_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"

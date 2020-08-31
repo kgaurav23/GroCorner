@@ -3,13 +3,15 @@ package `in`.grocorner.ui.launch.activity
 import `in`.grocorner.R
 import `in`.grocorner.ui.launch.fragment.OnBoardingFragment
 import `in`.grocorner.ui.launch.model.OnBoardingData
+import android.animation.Animator
 import android.os.Bundle
+import android.os.Handler
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.airbnb.lottie.LottieDrawable
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_on_boarding.*
 
@@ -21,8 +23,27 @@ class OnBoardingActivity : AppCompatActivity() {
 
         initViews()
 
-        swipe_left_animation.repeatCount = LottieDrawable.INFINITE
-        swipe_left_animation.playAnimation()
+        Handler().postDelayed({
+            swipe_left_animation.visibility = View.VISIBLE
+            swipe_left_animation.repeatCount = 3
+            swipe_left_animation.playAnimation()
+        }, 1000)
+
+        swipe_left_animation.addAnimatorListener(object : Animator.AnimatorListener {
+            override fun onAnimationRepeat(p0: Animator?) {
+            }
+
+            override fun onAnimationEnd(p0: Animator?) {
+                swipe_left_animation.visibility = View.GONE
+            }
+
+            override fun onAnimationCancel(p0: Animator?) {
+            }
+
+            override fun onAnimationStart(p0: Animator?) {
+            }
+
+        })
     }
 
     override fun onBackPressed() {

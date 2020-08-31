@@ -23,7 +23,7 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
 
         login_button.setOnClickListener {
             if (loginPresenter.isValidInput(mobile_number_edit_text.text.toString())) {
-                AppNavigator.navigateToOnBoardingActivity(this)
+                AppNavigator.navigateToOTPActivity(this)
             }
         }
 
