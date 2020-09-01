@@ -11,16 +11,20 @@
         android:supportsRtl="true"
         android:theme="@style/FullScreenTheme"
         tools:ignore="AllowBackup">
-        <activity android:name=".ui.srp.activity.HomeActivity">
 
-        </activity>
-        <activity
-            android:name=".ui.launch.activity.SplashActivity"
-            android:noHistory="true">
+        <activity android:name=".ui.srp.activity.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.launch.activity.SplashActivity"
+            android:noHistory="true">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
         </activity>
         <activity
             android:name=".ui.launch.activity.OnBoardingActivity"

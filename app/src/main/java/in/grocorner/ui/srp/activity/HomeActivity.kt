@@ -1,6 +1,7 @@
 package `in`.grocorner.ui.srp.activity
 
 import `in`.grocorner.R
+import `in`.grocorner.ui.category.fragment.CategoryFragment
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -16,6 +17,12 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         window.statusBarColor = ContextCompat.getColor(this, R.color.off_white)
 
         setupBottomNavigationMenuItemClickListener()
+        attachCategoryFragment()
+    }
+
+    private fun attachCategoryFragment() {
+        val fragment = CategoryFragment()
+        supportFragmentManager.beginTransaction().add(R.id.fragment_container, fragment).commit()
     }
 
     private fun setupBottomNavigationMenuItemClickListener() {
