@@ -19,6 +19,11 @@
         <item name="hintTextColor">@color/colorPrimaryDark</item>
     </style>
 
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/dusky_blue</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+
     <style name="TextStyle">
         <item name="android:fontFamily">@font/montserrat_bold</item>
         <item name="android:color">@color/colorPrimaryDark</item>
