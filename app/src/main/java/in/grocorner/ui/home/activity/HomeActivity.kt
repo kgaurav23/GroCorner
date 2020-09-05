@@ -1,6 +1,7 @@
 package `in`.grocorner.ui.home.activity
 
 import `in`.grocorner.R
+import `in`.grocorner.ui.cart.fragment.CartFragment
 import `in`.grocorner.ui.category.fragment.CategoryItemsFragment
 import `in`.grocorner.ui.home.fragments.CategoryFragment
 import `in`.grocorner.ui.home.fragments.HomeFragment
@@ -20,7 +21,12 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         window.statusBarColor = ContextCompat.getColor(this, R.color.colorAccent)
 
         bottom_navigation.setOnNavigationItemSelectedListener(this)
-        attachHomeFragment()
+        attachCartFragment()
+    }
+
+    private fun attachCartFragment() {
+        val fragment = CartFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, fragment).commit()
     }
 
     private fun attachHomeFragment() {

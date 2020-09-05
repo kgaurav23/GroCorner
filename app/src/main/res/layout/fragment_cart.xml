@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/space_x_small">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start_outer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/space_small"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end_outer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_end="@dimen/space_small" />
+
+    <ScrollView
+        android:id="@+id/cart_scroll_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end_outer"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_outer"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/space_large"
+            android:paddingBottom="@dimen/space_3x_large"
+            tools:context=".ui.category.fragment.CategoryItemsFragment">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/space_small"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintGuide_end="@dimen/space_small" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cart_rv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/promo_code_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_large"
+                android:layout_marginRight="@dimen/space_small"
+                android:background="@drawable/round_shape"
+                android:hint="Enter Voucher Code"
+                android:inputType="text"
+                android:padding="@dimen/space_large"
+                app:layout_constraintEnd_toStartOf="@id/promo_apply_button"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/cart_rv" />
+
+            <com.animation.animpresseffect.PressEffectButton
+                android:id="@+id/promo_apply_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_large"
+                android:background="@drawable/oval_shape_orange"
+                android:text="Apply"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/promo_code_et"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintTop_toBottomOf="@id/cart_rv" />
+
+            <TextView
+                android:id="@+id/total_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_2x_large"
+                android:text="Total"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/promo_code_et" />
+
+            <TextView
+                android:id="@+id/sub_total_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_large"
+                android:text="Sub Total"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/total_label" />
+
+            <TextView
+                android:id="@+id/delivery_fee_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:text="Delivery"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/sub_total_tv" />
+
+            <TextView
+                android:id="@+id/voucher_discount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:text="Voucher Discount"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/delivery_fee_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.animation.animpresseffect.PressEffectButton
+        android:id="@+id/checkout_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:background="@drawable/oval_shape_orange"
+        android:paddingStart="@dimen/space_large"
+        android:paddingEnd="@dimen/space_large"
+        android:text="Checkout"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="@dimen/space_3x_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end_outer"
+        app:layout_constraintStart_toEndOf="@+id/continue_shopping_button" />
+
+    <com.animation.animpresseffect.PressEffectButton
+        android:id="@+id/continue_shopping_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/oval_shape_dusky_blue"
+        android:paddingStart="@dimen/space_large"
+        android:paddingEnd="@dimen/space_large"
+        android:layout_marginTop="@dimen/space_3x_large"
+        android:text="Continue Shopping"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/checkout_button"
+        app:layout_constraintStart_toStartOf="@id/guideline_start_outer" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
