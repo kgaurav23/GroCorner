@@ -43,13 +43,12 @@ class AddToCartButton @JvmOverloads constructor(
         decrement_btn.setOnClickListener {
             if (canDecrementMore()) {
                 decrementCount()
+                setItemCountText()
 
                 if (isMinimumCountReached()) {
                     hideCountView()
                     showAddToCartButton()
                 }
-
-                setItemCountText()
 
                 if (isIncrementButtonDisabled()) {
                     enableCounterButton(increment_btn)
