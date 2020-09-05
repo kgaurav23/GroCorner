@@ -32,16 +32,18 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupCarouselView() {
-        item_carousel.pageCount = 5
-        item_carousel.setImageListener { _, imageView ->
-            ImageUtility.showImageFromUrl(
-                requireContext(),
-                "https://image.shutterstock.com/image-photo/fried-rice-chicken-prepared-served-600w-724814776.jpg",
-                imageView
-            )
-        }
-        item_carousel.setImageClickListener { position ->
-            Toast.makeText(context, "Clicked item: $position", Toast.LENGTH_SHORT).show()
+        item_carousel.apply {
+            pageCount = 5
+            setImageClickListener { position ->
+                Toast.makeText(context, "Clicked item: $position", Toast.LENGTH_SHORT).show()
+            }
+            setImageListener { _, imageView ->
+                ImageUtility.showImageFromUrl(
+                    requireContext(),
+                    "https://image.shutterstock.com/image-photo/fried-rice-chicken-prepared-served-600w-724814776.jpg",
+                    imageView
+                )
+            }
         }
     }
 
