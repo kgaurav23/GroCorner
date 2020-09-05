@@ -17,7 +17,7 @@ class OTPActivity : AppCompatActivity(), OTPContract.View {
         window.statusBarColor = ContextCompat.getColor(this, R.color.colorPrimaryDark)
 
         login_using_otp_button.setOnClickListener {
-            AppNavigator.navigateToSRPActivity(this)
+            AppNavigator.navigateToHomeActivity(this)
         }
     }
 

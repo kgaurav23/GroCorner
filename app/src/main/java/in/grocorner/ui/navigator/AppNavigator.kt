@@ -17,7 +17,7 @@ object AppNavigator {
         context.startActivity(Intent(context, OTPActivity::class.java))
     }
 
-    fun navigateToSRPActivity(context: Context) {
+    fun navigateToHomeActivity(context: Context) {
         context.startActivity(Intent(context, HomeActivity::class.java))
     }
 
