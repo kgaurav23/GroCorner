@@ -5,6 +5,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.add_to_cart_button_layout.view.*
@@ -15,11 +16,12 @@ class AddToCartButton @JvmOverloads constructor(
 
     private var itemCount = 0
     private var maxItemCountAllowed = Integer.MAX_VALUE
+    private lateinit var rootButtonView: View
 
     init {
         val inflater = context
             .getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        inflater.inflate(R.layout.add_to_cart_button_layout, null)
+        rootButtonView = inflater.inflate(R.layout.add_to_cart_button_layout, parent as ViewGroup)
 
         setupClickListenerForAddToCart()
         setupClickListenerForIncrementButton()
@@ -27,7 +29,7 @@ class AddToCartButton @JvmOverloads constructor(
     }
 
     private fun setupClickListenerForIncrementButton() {
-        increment_btn.setOnClickListener {
+        rootButtonView.increment_btn.setOnClickListener {
             if (canIncrementMore()) {
                 incrementCount()
                 setItemCountText()
@@ -40,7 +42,7 @@ class AddToCartButton @JvmOverloads constructor(
     }
 
     private fun setupClickListenerForDecrementButton() {
-        decrement_btn.setOnClickListener {
+        rootButtonView.decrement_btn.setOnClickListener {
             if (canDecrementMore()) {
                 decrementCount()
                 setItemCountText()
@@ -58,26 +60,26 @@ class AddToCartButton @JvmOverloads constructor(
     }
 
     private fun setupClickListenerForAddToCart() {
-        addToCartBtn.setOnClickListener {
+        rootButtonView.addToCartBtn.setOnClickListener {
             hideAddToCartButton()
             showCountView()
         }
     }
 
     private fun showCountView() {
-        item_count_view.visibility = VISIBLE
+        rootButtonView.item_count_view.visibility = VISIBLE
     }
 
     private fun hideCountView() {
-        item_count_view.visibility = GONE
+        rootButtonView.item_count_view.visibility = GONE
     }
 
     private fun showAddToCartButton() {
-        addToCartBtn.visibility = VISIBLE
+        rootButtonView.addToCartBtn.visibility = VISIBLE
     }
 
     private fun hideAddToCartButton() {
-        addToCartBtn.visibility = GONE
+        rootButtonView.addToCartBtn.visibility = GONE
     }
 
     fun getItemCount() = itemCount
@@ -98,6 +100,12 @@ class AddToCartButton @JvmOverloads constructor(
         itemCount--
     }
 
+    fun setInitialItemCount(count: Int) {
+        itemCount = count
+        hideAddToCartButton()
+        showCountView()
+    }
+
     private fun disableCounterButton(buttonView: View) {
         val button = buttonView as ImageButton
         button.isEnabled = false
@@ -112,7 +120,7 @@ class AddToCartButton @JvmOverloads constructor(
     }
 
     private fun setItemCountText() {
-        item_count_tv.text = itemCount.toString()
+        rootButtonView.item_count_tv.text = itemCount.toString()
     }
 
     private fun setMaxItemCount(maxItemAllowed: Int) {
@@ -123,5 +131,5 @@ class AddToCartButton @JvmOverloads constructor(
 
     private fun isMaximumCountReached() = itemCount == maxItemCountAllowed
 
-    private fun isIncrementButtonDisabled() = !increment_btn.isEnabled
+    private fun isIncrementButtonDisabled() = !rootButtonView.increment_btn.isEnabled
 }
