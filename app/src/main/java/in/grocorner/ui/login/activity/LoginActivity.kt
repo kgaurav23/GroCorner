@@ -45,7 +45,7 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
     }
 
     override fun navigateToSRPActivity() {
-        AppNavigator.navigateToSRPActivity(this)
+        AppNavigator.navigateToHomeActivity(this)
     }
 
     override fun getContext(): Context {
