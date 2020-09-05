@@ -19,7 +19,7 @@ class AddToCartButton @JvmOverloads constructor(
     init {
         val inflater = context
             .getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        inflater.inflate(R.layout.add_to_cart_button_layout, false)
+        inflater.inflate(R.layout.add_to_cart_button_layout, null)
 
         setupClickListenerForAddToCart()
         setupClickListenerForIncrementButton()
