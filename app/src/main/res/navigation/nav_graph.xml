@@ -9,7 +9,7 @@
         android:id="@+id/homeFragment"
         android:name="in.grocorner.ui.home.fragments.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_categoryItemsFragment"
             app:destination="@id/categoryItemsFragment" />
@@ -18,7 +18,7 @@
         android:id="@+id/categoryFragment"
         android:name="in.grocorner.ui.home.fragments.CategoryFragment"
         android:label="CategoryFragment"
-        tools:layout="@layout/fragment_category" >
+        tools:layout="@layout/fragment_category">
         <action
             android:id="@+id/action_categoryFragment_to_categoryItemsFragment"
             app:destination="@id/categoryItemsFragment" />
@@ -27,7 +27,7 @@
         android:id="@+id/itemDetailFragment"
         android:name="in.grocorner.ui.itemdetail.fragment.ItemDetailFragment"
         android:label="ItemDetailFragment"
-        tools:layout="@layout/fragment_item_detail" >
+        tools:layout="@layout/fragment_item_detail">
         <argument
             android:name="itemId"
             app:argType="string" />
@@ -36,7 +36,7 @@
         android:id="@+id/categoryItemsFragment"
         android:name="in.grocorner.ui.category.fragment.CategoryItemsFragment"
         android:label="CategoryItemsFragment"
-        tools:layout="@layout/fragment_category_item" >
+        tools:layout="@layout/fragment_category_item">
         <action
             android:id="@+id/action_categoryItemsFragment_to_itemDetailFragment"
             app:destination="@id/itemDetailFragment" />
@@ -49,4 +49,9 @@
         android:name="in.grocorner.ui.cart.fragment.CartFragment"
         android:label="CartFragment"
         tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/orderConfirmationFragment"
+        android:name="in.grocorner.ui.order_confirmation.fragment.OrderConfirmationFragment"
+        android:label="OrderConfirmationFragment"
+        tools:layout="@layout/fragment_order_confirmation" />
 </navigation>

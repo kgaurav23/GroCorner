@@ -24,5 +24,8 @@
     <string name="category">Category</string>
     <string name="offers">Offers</string>
     <string name="cart">Cart</string>
+    <string name="order_accepted_label">Order Accepted</string>
+    <string name="order_number_message">Your Order No. #%1$s has been placed</string>
+    <string name="track_order">Track Order</string>
 
 </resources>
