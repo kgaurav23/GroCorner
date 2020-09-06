@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="in.grocorner.ui.home.fragments.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_categoryItemsFragment"
+            app:destination="@id/categoryItemsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="in.grocorner.ui.home.fragments.CategoryFragment"
+        android:label="CategoryFragment"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_categoryItemsFragment"
+            app:destination="@id/categoryItemsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemDetailFragment"
+        android:name="in.grocorner.ui.itemdetail.fragment.ItemDetailFragment"
+        android:label="ItemDetailFragment"
+        tools:layout="@layout/fragment_item_detail" />
+    <fragment
+        android:id="@+id/categoryItemsFragment"
+        android:name="in.grocorner.ui.category.fragment.CategoryItemsFragment"
+        android:label="CategoryItemsFragment"
+        tools:layout="@layout/fragment_category_item" >
+        <action
+            android:id="@+id/action_categoryItemsFragment_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="in.grocorner.ui.cart.fragment.CartFragment"
+        android:label="CartFragment"
+        tools:layout="@layout/fragment_cart" />
+</navigation>

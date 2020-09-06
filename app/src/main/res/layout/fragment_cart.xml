@@ -146,7 +146,6 @@
         android:paddingEnd="@dimen/space_large"
         android:text="Checkout"
         android:textColor="@android:color/white"
-        android:layout_marginTop="@dimen/space_3x_large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/guideline_end_outer"
         app:layout_constraintStart_toEndOf="@+id/continue_shopping_button" />
@@ -159,7 +158,6 @@
         android:background="@drawable/oval_shape_dusky_blue"
         android:paddingStart="@dimen/space_large"
         android:paddingEnd="@dimen/space_large"
-        android:layout_marginTop="@dimen/space_3x_large"
         android:text="Continue Shopping"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"

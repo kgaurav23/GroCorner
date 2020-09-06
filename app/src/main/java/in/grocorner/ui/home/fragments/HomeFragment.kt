@@ -33,7 +33,6 @@ class HomeFragment : Fragment() {
 
     private fun setupCarouselView() {
         item_carousel.apply {
-            pageCount = 5
             setImageClickListener { position ->
                 Toast.makeText(context, "Clicked item: $position", Toast.LENGTH_SHORT).show()
             }
@@ -44,6 +43,7 @@ class HomeFragment : Fragment() {
                     imageView
                 )
             }
+            pageCount = 5
         }
     }
 
