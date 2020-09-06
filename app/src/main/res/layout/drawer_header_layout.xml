@@ -1,32 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="220dp"
-    android:background="@color/dusky_blue"
-    android:gravity="bottom"
-    android:orientation="vertical"
-    android:padding="@dimen/space_large"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    android:layout_height="160dp"
+    android:background="@color/off_white">
 
-    <ImageView
-        android:id="@+id/profile_image"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="@dimen/space_2x_large"
-        android:src="@android:drawable/ic_menu_my_calendar" />
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/user_profile_image_iv"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="@dimen/space_large"
+        android:src="@drawable/ic_user"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_navigation_user_name"
-        android:layout_width="match_parent"
+        android:id="@+id/user_name_tv"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_2x_large"
+        android:fontFamily="@font/montserrat"
+        android:text="Kumar Gaurav"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/user_profile_image_iv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/user_email_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_2x_large"
         android:layout_marginTop="@dimen/space_large"
-        android:textColor="@color/colorPrimaryDark"
-        android:text="Kumar Gaurav" />
-
-    <TextView
-        android:id="@+id/tv_navigation_user_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimaryDark"
-        android:text="kumar.gaurav@gmail.com" />
-</LinearLayout>
+        android:fontFamily="@font/montserrat"
+        android:text="kg.nitjsr@gmail.com"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/user_profile_image_iv"
+        app:layout_constraintTop_toBottomOf="@id/user_name_tv" />
+</androidx.constraintlayout.widget.ConstraintLayout>

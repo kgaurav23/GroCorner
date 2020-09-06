@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/editProfile"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Edit Profile" />
+    <item
+        android:id="@+id/deliveryAddress"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Delivery Address" />
+
+    <item
+        android:id="@+id/orderHistory"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Order History" />
+    <item
+        android:id="@+id/logOut"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Logout" />
 
 </menu>
