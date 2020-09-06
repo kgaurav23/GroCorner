@@ -27,5 +27,9 @@
     <string name="order_accepted_label">Order Accepted</string>
     <string name="order_number_message">Your Order No. #%1$s has been placed</string>
     <string name="track_order">Track Order</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="order_history">Order History</string>
+    <string name="logout">Logout</string>
 
 </resources>
