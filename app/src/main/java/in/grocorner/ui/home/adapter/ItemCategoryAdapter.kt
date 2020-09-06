@@ -1,11 +1,13 @@
 package `in`.grocorner.ui.home.adapter
 
 import `in`.grocorner.R
+import `in`.grocorner.ui.home.fragments.HomeFragmentDirections
 import `in`.grocorner.ui.home.model.ItemCategory
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 
 class ItemCategoryAdapter(
@@ -22,7 +24,16 @@ class ItemCategoryAdapter(
     override fun getItemCount() = categories.size
 
     override fun onBindViewHolder(holder: ItemCategoryViewHolder, position: Int) {
+        holder.itemView.setOnClickListener {
+            navigateToCategoryItems(it, position)
+        }
+    }
 
+    private fun navigateToCategoryItems(view: View, position: Int) {
+        val categoryId = ""
+        val action =
+            HomeFragmentDirections.actionHomeFragmentToCategoryItemsFragment(categoryId)
+        view.findNavController().navigate(action)
     }
 
     class ItemCategoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

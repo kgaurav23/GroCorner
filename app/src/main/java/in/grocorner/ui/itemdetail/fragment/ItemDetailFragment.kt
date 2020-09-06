@@ -73,7 +73,6 @@ class ItemDetailFragment : Fragment() {
     }
 
     private fun setupCarouselView() {
-        itemCarouselView.pageCount = 5
         itemCarouselView.setImageListener { position, imageView ->
             ImageUtility.showImageFromUrl(
                 requireContext(),
@@ -84,5 +83,6 @@ class ItemDetailFragment : Fragment() {
         itemCarouselView.setImageClickListener { position ->
             Toast.makeText(context, "Clicked item: $position", Toast.LENGTH_SHORT).show()
         }
+        itemCarouselView.pageCount = 5
     }
 }

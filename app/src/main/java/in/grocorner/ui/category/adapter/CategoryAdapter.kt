@@ -1,6 +1,7 @@
 package `in`.grocorner.ui.category.adapter
 
 import `in`.grocorner.R
+import `in`.grocorner.ui.category.fragment.CategoryItemsFragmentDirections
 import `in`.grocorner.ui.category.model.CategoryModel
 import android.content.Context
 import android.graphics.Paint
@@ -10,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 
 class CategoryAdapter(val context: Context, private val categoryList: List<CategoryModel>) :
@@ -26,6 +28,16 @@ class CategoryAdapter(val context: Context, private val categoryList: List<Categ
         categoryHolder.apply {
             categoryMRP.paintFlags = categoryMRP.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
         }
+        holder.itemView.setOnClickListener {
+            navigateToItemDetailsScreen(it, position)
+        }
+    }
+
+    private fun navigateToItemDetailsScreen(view: View, position: Int) {
+        val itemId = ""
+        val action =
+            CategoryItemsFragmentDirections.actionCategoryItemsFragmentToItemDetailFragment(itemId)
+        view.findNavController().navigate(action)
     }
 
     override fun getItemCount() = categoryList.size

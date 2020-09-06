@@ -27,7 +27,11 @@
         android:id="@+id/itemDetailFragment"
         android:name="in.grocorner.ui.itemdetail.fragment.ItemDetailFragment"
         android:label="ItemDetailFragment"
-        tools:layout="@layout/fragment_item_detail" />
+        tools:layout="@layout/fragment_item_detail" >
+        <argument
+            android:name="itemId"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/categoryItemsFragment"
         android:name="in.grocorner.ui.category.fragment.CategoryItemsFragment"
@@ -36,6 +40,9 @@
         <action
             android:id="@+id/action_categoryItemsFragment_to_itemDetailFragment"
             app:destination="@id/itemDetailFragment" />
+        <argument
+            android:name="categoryId"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/cartFragment"
