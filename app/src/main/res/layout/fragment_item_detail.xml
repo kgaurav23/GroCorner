@@ -101,16 +101,11 @@
             app:layout_constraintStart_toStartOf="@id/guideline_start"
             app:layout_constraintTop_toBottomOf="@id/item_description_label_tv" />
 
-        <com.animation.animpresseffect.PressEffectButton
+        <in.grocorner.ui.customviews.AddToCartButton
             android:id="@+id/add_to_cart_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/space_large"
-            android:background="@drawable/oval_shape_orange"
-            android:padding="@dimen/space_large"
-            android:text="Add to Cart"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/item_description_tv" />
