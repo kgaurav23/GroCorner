@@ -10,7 +10,7 @@
     <style name="FullScreenTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
-        <!--        <item name="android:fontFamily">@font/montserrat_bold</item>-->
+        <item name="android:textViewStyle">@style/TextStyle.Black.Medium</item>
     </style>
 
     <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
