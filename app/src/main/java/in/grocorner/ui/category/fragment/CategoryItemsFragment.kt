@@ -24,12 +24,9 @@ class CategoryItemsFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         val categoryList = mutableListOf<CategoryModel>()
-        categoryList.add(CategoryModel("Daawat Rice", 620, 470, 0f, 0, ""))
-        categoryList.add(CategoryModel("Daawat Rice", 620, 470, 0f, 0, ""))
-        categoryList.add(CategoryModel("Daawat Rice", 620, 470, 0f, 0, ""))
-        categoryList.add(CategoryModel("Daawat Rice", 620, 470, 0f, 0, ""))
-        categoryList.add(CategoryModel("Daawat Rice", 620, 470, 0f, 0, ""))
-        categoryList.add(CategoryModel("Daawat Rice", 620, 470, 0f, 0, ""))
+        repeat(30) {
+            categoryList.add(CategoryModel("Daawat Rice", 620, 470, 0f, 0, ""))
+        }
         context?.let {
             val categoryAdapter = CategoryAdapter(it, categoryList)
             category_rv.adapter = categoryAdapter

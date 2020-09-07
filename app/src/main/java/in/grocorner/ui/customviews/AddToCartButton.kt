@@ -60,6 +60,8 @@ class AddToCartButton @JvmOverloads constructor(
         addToCartBtn.setOnClickListener {
             hideAddToCartButton()
             showCountView()
+            incrementCount()
+            setItemCountText()
         }
     }
 
