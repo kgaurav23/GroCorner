@@ -103,6 +103,7 @@ class AddToCartButton @JvmOverloads constructor(
         itemCount = count
         hideAddToCartButton()
         showCountView()
+        setItemCountText()
     }
 
     private fun disableCounterButton(buttonView: View) {
