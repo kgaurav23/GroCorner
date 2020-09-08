@@ -7,6 +7,22 @@ android {
     compileSdkVersion 30
     buildToolsVersion "29.0.3"
 
+    signingConfigs {
+        debug {
+            keyAlias 'gcorner'
+            keyPassword 'GroCornerDebug!@#'
+            storeFile file('../grocorner-debug-signing-key')
+            storePassword 'GroCornerDebug!@#'
+        }
+
+        /*release {
+            keyAlias ''
+            keyPassword ''
+            storeFile file('../')
+            storePassword ''
+        }*/
+    }
+
     defaultConfig {
         applicationId "in.grocorner"
         minSdkVersion 21
@@ -19,8 +35,13 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
         }
     }
 }
