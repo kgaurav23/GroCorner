@@ -41,7 +41,7 @@ class ProductDetailFragment : Fragment() {
         repeat(10) {
             reviewsList.add(
                 ReviewsModel(
-                    reviewPersonName = "Gaurav",
+                    reviewPersonName = "Kumar Gaurav",
                     reviewContent = "I had purchased this item at very low cost from grocorner.",
                     rating = 3.5f
                 )
