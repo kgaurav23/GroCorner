@@ -1,6 +1,6 @@
-package `in`.grocorner.ui.itemdetail.model
+package `in`.grocorner.ui.product_detail.model
 
-data class ItemMayLikeModel(
+data class ProductsMayLikeModel(
     val itemName: String,
     val itemImageUrl: String,
     val itemSellingPrice: Float,

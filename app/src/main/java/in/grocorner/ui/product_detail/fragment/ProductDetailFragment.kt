@@ -1,10 +1,10 @@
-package `in`.grocorner.ui.itemdetail.fragment
+package `in`.grocorner.ui.product_detail.fragment
 
 import `in`.grocorner.R
-import `in`.grocorner.ui.itemdetail.adapter.ItemMayLikeAdapter
-import `in`.grocorner.ui.itemdetail.adapter.ReviewsAdapter
-import `in`.grocorner.ui.itemdetail.model.ItemMayLikeModel
-import `in`.grocorner.ui.itemdetail.model.ReviewsModel
+import `in`.grocorner.ui.product_detail.adapter.ProductsMayLikeAdapter
+import `in`.grocorner.ui.product_detail.adapter.ReviewsAdapter
+import `in`.grocorner.ui.product_detail.model.ProductsMayLikeModel
+import `in`.grocorner.ui.product_detail.model.ReviewsModel
 import `in`.grocorner.ui.utility.ImageUtility
 import android.graphics.Paint
 import android.os.Bundle
@@ -14,16 +14,16 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.fragment_item_detail.*
+import kotlinx.android.synthetic.main.fragment_product_detail.*
 
-class ItemDetailFragment : Fragment() {
+class ProductDetailFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_item_detail, container, false)
+        return inflater.inflate(R.layout.fragment_product_detail, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -56,10 +56,10 @@ class ItemDetailFragment : Fragment() {
     }
 
     private fun setupItemMayLikeView() {
-        val itemMayLikeList = mutableListOf<ItemMayLikeModel>()
+        val itemMayLikeList = mutableListOf<ProductsMayLikeModel>()
         repeat(10) {
             itemMayLikeList.add(
-                ItemMayLikeModel(
+                ProductsMayLikeModel(
                     itemName = "",
                     itemImageUrl = "",
                     itemSellingPrice = 3.5f,
@@ -68,7 +68,7 @@ class ItemDetailFragment : Fragment() {
             )
         }
         context?.let {
-            val itemMayLikeAdapter = ItemMayLikeAdapter(it, itemMayLikeList)
+            val itemMayLikeAdapter = ProductsMayLikeAdapter(it, itemMayLikeList)
             item_may_like_rv.adapter = itemMayLikeAdapter
             item_may_like_rv.layoutManager =
                 LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)

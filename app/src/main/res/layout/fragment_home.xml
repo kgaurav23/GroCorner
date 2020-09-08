@@ -89,7 +89,7 @@
             android:id="@+id/rv_item_category"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/item_category"
+            tools:listitem="@layout/item_category_grid"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
     </androidx.cardview.widget.CardView>
 

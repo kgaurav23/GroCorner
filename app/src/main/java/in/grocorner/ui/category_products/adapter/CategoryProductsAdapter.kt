@@ -1,8 +1,8 @@
-package `in`.grocorner.ui.category.adapter
+package `in`.grocorner.ui.category_products.adapter
 
 import `in`.grocorner.R
-import `in`.grocorner.ui.category.fragment.CategoryItemsFragmentDirections
-import `in`.grocorner.ui.category.model.CategoryModel
+import `in`.grocorner.ui.category_products.fragment.CategoryProductsFragmentDirections
+import `in`.grocorner.ui.category_products.model.CategoryProductsModel
 import `in`.grocorner.ui.customviews.AddToCartButton
 import android.content.Context
 import android.graphics.Paint
@@ -14,12 +14,15 @@ import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 
-class CategoryAdapter(val context: Context, private val categoryList: List<CategoryModel>) :
+class CategoryAdapter(
+    val context: Context,
+    private val categoryProductsList: List<CategoryProductsModel>
+) :
     RecyclerView.Adapter<CategoryVH>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoryVH {
         val view =
-            LayoutInflater.from(context).inflate(R.layout.layout_category_item, parent, false)
+            LayoutInflater.from(context).inflate(R.layout.item_product, parent, false)
         return CategoryVH(view)
     }
 
@@ -36,11 +39,14 @@ class CategoryAdapter(val context: Context, private val categoryList: List<Categ
     private fun navigateToItemDetailsScreen(view: View, position: Int) {
         val itemId = ""
         val action =
-            CategoryItemsFragmentDirections.actionCategoryItemsFragmentToItemDetailFragment(itemId)
+            CategoryProductsFragmentDirections.actionCategoryProductsFragmentToProductDetailFragment(
+                itemId
+            )
+
         view.findNavController().navigate(action)
     }
 
-    override fun getItemCount() = categoryList.size
+    override fun getItemCount() = categoryProductsList.size
 }
 
 class CategoryVH(itemView: View) : RecyclerView.ViewHolder(itemView) {

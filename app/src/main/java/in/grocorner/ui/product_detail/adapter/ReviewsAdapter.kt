@@ -1,7 +1,7 @@
-package `in`.grocorner.ui.itemdetail.adapter
+package `in`.grocorner.ui.product_detail.adapter
 
 import `in`.grocorner.R
-import `in`.grocorner.ui.itemdetail.model.ReviewsModel
+import `in`.grocorner.ui.product_detail.model.ReviewsModel
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -15,7 +15,7 @@ class ReviewsAdapter(val context: Context, private val reviewsList: List<Reviews
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReviewsVH {
         val view =
-            LayoutInflater.from(context).inflate(R.layout.layout_reviews_item, parent, false)
+            LayoutInflater.from(context).inflate(R.layout.item_review, parent, false)
         return ReviewsVH(view)
     }
 

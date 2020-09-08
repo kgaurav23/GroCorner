@@ -1,4 +1,4 @@
-package `in`.grocorner.ui.itemdetail.model
+package `in`.grocorner.ui.product_detail.model
 
 data class ReviewsModel(
     val reviewPersonName: String,

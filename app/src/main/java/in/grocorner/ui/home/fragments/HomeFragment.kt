@@ -1,7 +1,7 @@
 package `in`.grocorner.ui.home.fragments
 
 import `in`.grocorner.R
-import `in`.grocorner.ui.home.adapter.ItemCategoryAdapter
+import `in`.grocorner.ui.home.adapter.CategoryGridAdapter
 import `in`.grocorner.ui.home.model.ItemCategory
 import `in`.grocorner.ui.utility.ImageUtility
 import android.os.Bundle
@@ -38,7 +38,7 @@ class HomeFragment : Fragment() {
 
     private fun setupViews() {
         rv_item_category.layoutManager = GridLayoutManager(requireContext(), 3)
-        rv_item_category.adapter = ItemCategoryAdapter(requireContext(), getDummyItems())
+        rv_item_category.adapter = CategoryGridAdapter(requireContext(), getDummyItems())
     }
 
     private fun setupCarouselView() {

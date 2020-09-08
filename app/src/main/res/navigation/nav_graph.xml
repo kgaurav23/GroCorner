@@ -9,40 +9,40 @@
         android:id="@+id/homeFragment"
         android:name="in.grocorner.ui.home.fragments.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_home">
+        tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_categoryItemsFragment"
-            app:destination="@id/categoryItemsFragment" />
+            android:id="@+id/action_homeFragment_to_categoryProductsFragment"
+            app:destination="@id/categoryProductsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/categoryFragment"
-        android:name="in.grocorner.ui.home.fragments.CategoryFragment"
-        android:label="CategoryFragment"
-        tools:layout="@layout/fragment_category">
+        android:id="@+id/categoryListFragment"
+        android:name="in.grocorner.ui.home.fragments.CategoryListFragment"
+        android:label="CategoryListFragment"
+        tools:layout="@layout/fragment_category_list" >
         <action
-            android:id="@+id/action_categoryFragment_to_categoryItemsFragment"
-            app:destination="@id/categoryItemsFragment" />
+            android:id="@+id/action_categoryListFragment_to_categoryProductsFragment"
+            app:destination="@id/categoryProductsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/itemDetailFragment"
-        android:name="in.grocorner.ui.itemdetail.fragment.ItemDetailFragment"
-        android:label="ItemDetailFragment"
-        tools:layout="@layout/fragment_item_detail">
+        android:id="@+id/productDetailFragment"
+        android:name="in.grocorner.ui.product_detail.fragment.ProductDetailFragment"
+        android:label="ProductDetailFragment"
+        tools:layout="@layout/fragment_product_detail">
         <argument
-            android:name="itemId"
+            android:name="productId"
             app:argType="string" />
     </fragment>
     <fragment
-        android:id="@+id/categoryItemsFragment"
-        android:name="in.grocorner.ui.category.fragment.CategoryItemsFragment"
-        android:label="CategoryItemsFragment"
-        tools:layout="@layout/fragment_category_item">
-        <action
-            android:id="@+id/action_categoryItemsFragment_to_itemDetailFragment"
-            app:destination="@id/itemDetailFragment" />
+        android:id="@+id/categoryProductsFragment"
+        android:name="in.grocorner.ui.category_products.fragment.CategoryProductsFragment"
+        android:label="CategoryProductsFragment"
+        tools:layout="@layout/fragment_category_products">
         <argument
             android:name="categoryId"
             app:argType="string" />
+        <action
+            android:id="@+id/action_categoryProductsFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/cartFragment"

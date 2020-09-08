@@ -10,14 +10,14 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 
-class ItemCategoryAdapter(
+class CategoryGridAdapter(
     private val context: Context,
     private val categories: List<ItemCategory>
-) : RecyclerView.Adapter<ItemCategoryAdapter.ItemCategoryViewHolder>() {
+) : RecyclerView.Adapter<CategoryGridAdapter.ItemCategoryViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemCategoryViewHolder {
         val view =
-            LayoutInflater.from(context).inflate(R.layout.item_category, parent, false)
+            LayoutInflater.from(context).inflate(R.layout.item_category_grid, parent, false)
         return ItemCategoryViewHolder(view)
     }
 
@@ -32,7 +32,7 @@ class ItemCategoryAdapter(
     private fun navigateToCategoryItems(view: View, position: Int) {
         val categoryId = ""
         val action =
-            HomeFragmentDirections.actionHomeFragmentToCategoryItemsFragment(categoryId)
+            HomeFragmentDirections.actionHomeFragmentToCategoryProductsFragment(categoryId)
         view.findNavController().navigate(action)
     }
 

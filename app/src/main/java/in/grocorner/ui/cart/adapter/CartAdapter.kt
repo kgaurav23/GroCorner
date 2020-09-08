@@ -16,7 +16,7 @@ class CartAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartVH {
         val view =
-            LayoutInflater.from(context).inflate(R.layout.layout_cart_item, parent, false)
+            LayoutInflater.from(context).inflate(R.layout.item_cart, parent, false)
         return CartVH(view)
     }
 

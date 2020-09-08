@@ -1,6 +1,6 @@
-package `in`.grocorner.ui.category.model
+package `in`.grocorner.ui.category_products.model
 
-data class CategoryModel(
+data class CategoryProductsModel(
     val categoryName: String,
     val categoryMRP: Int,
     val categorySellingPrice: Int,
