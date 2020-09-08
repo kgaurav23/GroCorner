@@ -6,6 +6,7 @@ import `in`.grocorner.ui.itemdetail.adapter.ReviewsAdapter
 import `in`.grocorner.ui.itemdetail.model.ItemMayLikeModel
 import `in`.grocorner.ui.itemdetail.model.ReviewsModel
 import `in`.grocorner.ui.utility.ImageUtility
+import android.graphics.Paint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -31,6 +32,8 @@ class ItemDetailFragment : Fragment() {
         setupCarouselView()
         setupItemMayLikeView()
         setupReviewsView()
+
+        item_mrp_tv.paintFlags = item_mrp_tv.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
     }
 
     private fun setupReviewsView() {
@@ -76,7 +79,7 @@ class ItemDetailFragment : Fragment() {
         itemCarouselView.setImageListener { position, imageView ->
             ImageUtility.showImageFromUrl(
                 requireContext(),
-                "https://image.shutterstock.com/image-photo/fried-rice-chicken-prepared-served-600w-724814776.jpg",
+                "https://cache.net-a-porter.com/images/products/1140673/1140673_in_2000_q80.jpg",
                 imageView
             )
         }

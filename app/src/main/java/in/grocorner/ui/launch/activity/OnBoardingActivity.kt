@@ -25,9 +25,9 @@ class OnBoardingActivity : AppCompatActivity() {
 
         Handler().postDelayed({
             swipe_left_animation.visibility = View.VISIBLE
-            swipe_left_animation.repeatCount = 3
+            swipe_left_animation.repeatCount = 1
             swipe_left_animation.playAnimation()
-        }, 1000)
+        }, 800)
 
         swipe_left_animation.addAnimatorListener(object : Animator.AnimatorListener {
             override fun onAnimationRepeat(p0: Animator?) {

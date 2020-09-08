@@ -12,11 +12,11 @@
 
     <item
         android:id="@+id/orderHistory"
-        android:icon="@android:drawable/ic_menu_edit"
+        android:icon="@drawable/ic_history"
         android:title="@string/order_history" />
     <item
         android:id="@+id/logOut"
-        android:icon="@android:drawable/ic_menu_edit"
+        android:icon="@drawable/ic_logout"
         android:title="@string/logout" />
 
 </menu>

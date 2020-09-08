@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -10,8 +9,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/space_large"
-        android:background="@color/off_white">
+        android:background="@color/off_white"
+        android:padding="@dimen/space_large">
 
         <ImageView
             android:id="@+id/img_item"
@@ -23,41 +22,39 @@
 
         <TextView
             android:id="@+id/tv_heading"
+            style="@style/TextStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="Upto 69% off"
-            style="@style/TextStyle"
-            android:textColor="@color/green"
             android:layout_marginStart="@dimen/space_2x_large"
+            android:text="Upto 69% off"
+            android:textColor="@color/green"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/img_item"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_sub_heading"
+            style="@style/TextStyle.Bold.Black.Medium"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="Grocery and staples"
-            style="@style/TextStyle"
-            android:textColor="@color/black_70"
             android:layout_marginStart="@dimen/space_2x_large"
             android:layout_marginTop="@dimen/space_large"
+            android:text="Grocery and staples"
+            android:textColor="@color/black_70"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/img_item"
-            app:layout_constraintTop_toBottomOf="@id/tv_heading"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/tv_heading" />
 
         <TextView
             android:id="@+id/tv_description"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:text="Evaluate new technologies and device platforms; provide feasibility assessments and accurate estimates for project implementations"
-            android:fontFamily="@font/montserrat"
-            android:textColor="@color/black_70"
-            android:textSize="11sp"
             android:layout_marginStart="@dimen/space_2x_large"
+            android:text="Evaluate new technologies and device platforms; provide feasibility assessments and accurate estimates for project implementations"
+            style="@style/TextStyle.Gray.Small"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/img_item"
-            app:layout_constraintTop_toBottomOf="@id/tv_sub_heading"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/tv_sub_heading" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

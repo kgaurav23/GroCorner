@@ -66,6 +66,7 @@
                 android:layout_marginTop="@dimen/space_large"
                 android:layout_marginRight="@dimen/space_small"
                 android:background="@drawable/round_shape"
+                android:fontFamily="@font/montserrat"
                 android:hint="Enter Voucher Code"
                 android:inputType="text"
                 android:padding="@dimen/space_large"
@@ -79,6 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/space_large"
                 android:background="@drawable/oval_shape_orange"
+                android:fontFamily="@font/montserrat"
                 android:text="Apply"
                 android:textColor="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="@+id/promo_code_et"
@@ -87,46 +89,41 @@
 
             <TextView
                 android:id="@+id/total_label"
+                style="@style/TextStyle.Bold.Black.XLarge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/space_2x_large"
                 android:text="Total"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
                 app:layout_constraintTop_toBottomOf="@id/promo_code_et" />
 
             <TextView
                 android:id="@+id/sub_total_tv"
+                style="@style/TextStyle.Black.Large"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/space_large"
                 android:text="Sub Total"
-                android:textColor="@color/black"
-                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
                 app:layout_constraintTop_toBottomOf="@id/total_label" />
 
             <TextView
                 android:id="@+id/delivery_fee_tv"
+                style="@style/TextStyle.Black.Large"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/space_small"
                 android:text="Delivery"
-                android:textColor="@color/black"
-                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
                 app:layout_constraintTop_toBottomOf="@id/sub_total_tv" />
 
             <TextView
                 android:id="@+id/voucher_discount_tv"
+                style="@style/TextStyle.Black.Large"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/space_small"
                 android:text="Voucher Discount"
-                android:textColor="@color/black"
-                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="@id/guideline_start"
                 app:layout_constraintTop_toBottomOf="@id/delivery_fee_tv" />
 
@@ -139,6 +136,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="2dp"
         android:background="@drawable/oval_shape_orange"
+        android:fontFamily="@font/montserrat"
         android:paddingStart="@dimen/space_large"
         android:paddingEnd="@dimen/space_large"
         android:text="Checkout"
@@ -153,6 +151,7 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="2dp"
         android:background="@drawable/oval_shape_dusky_blue"
+        android:fontFamily="@font/montserrat"
         android:paddingStart="@dimen/space_large"
         android:paddingEnd="@dimen/space_large"
         android:text="Continue Shopping"

@@ -15,10 +15,10 @@
         tools:ignore="AllowBackup">
 
         <activity android:name=".ui.home.activity.HomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
         <activity
             android:name=".ui.launch.activity.SplashActivity"
@@ -31,7 +31,12 @@
         <activity
             android:name=".ui.launch.activity.OnBoardingActivity"
             android:noHistory="true"
-            android:theme="@style/FullScreenTheme" />
+            android:theme="@style/FullScreenTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity android:name=".ui.login.activity.LoginActivity" />
 

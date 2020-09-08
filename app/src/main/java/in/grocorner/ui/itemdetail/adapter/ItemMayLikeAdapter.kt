@@ -16,7 +16,7 @@ class ItemMayLikeAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemMayLikeVH {
         val view =
-            LayoutInflater.from(context).inflate(R.layout.layout_item_may_like_item, parent, false)
+            LayoutInflater.from(context).inflate(R.layout.layout_category_item, parent, false)
         return ItemMayLikeVH(view)
     }
 

@@ -19,25 +19,23 @@
 
     <TextView
         android:id="@+id/user_name_tv"
+        style="@style/TextStyle.Black.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/space_large"
-        android:fontFamily="@font/montserrat"
-        android:text="Kumar Gaurav"
-        android:textColor="@color/black"
         android:layout_marginBottom="@dimen/space_2x_large"
-        app:layout_constraintTop_toTopOf="@id/user_profile_image_iv"
+        android:text="Kumar Gaurav"
         app:layout_constraintBottom_toBottomOf="@id/user_profile_image_iv"
-        app:layout_constraintStart_toEndOf="@id/user_profile_image_iv" />
+        app:layout_constraintStart_toEndOf="@id/user_profile_image_iv"
+        app:layout_constraintTop_toTopOf="@id/user_profile_image_iv" />
 
     <TextView
         android:id="@+id/user_email_tv"
+        style="@style/TextStyle.Black.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/space_large"
-        android:fontFamily="@font/montserrat"
         android:text="kg.nitjsr@gmail.com"
-        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@id/user_profile_image_iv"
         app:layout_constraintTop_toBottomOf="@+id/user_name_tv" />
 </androidx.constraintlayout.widget.ConstraintLayout>
