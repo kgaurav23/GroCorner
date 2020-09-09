@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_cart.*
 
@@ -38,6 +39,11 @@ class CartFragment : Fragment() {
             cart_rv.adapter = cartAdapter
             cart_rv.layoutManager =
                 LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        }
+
+        checkout_button.setOnClickListener {
+            val action = CartFragmentDirections.actionCartFragmentToAddressFragment()
+            findNavController().navigate(action)
         }
     }
 }

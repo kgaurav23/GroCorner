@@ -250,7 +250,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="@drawable/oval_shape_orange"
-        android:text="Back"
+        android:text="Pay"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         android:layout_marginTop="@dimen/space_2x_large"
