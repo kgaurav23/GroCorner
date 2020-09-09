@@ -18,7 +18,7 @@
     <LinearLayout
         android:id="@+id/item_count_view"
         android:layout_width="80dp"
-        android:layout_height="32dp"
+        android:layout_height="40dp"
         android:orientation="horizontal"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,9 +34,9 @@
 
         <TextView
             android:id="@+id/item_count_tv"
-            style="@style/TextStyle.Black.Large"
+            style="@style/TextStyle.Black.Medium"
             android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_height="32dp"
             android:layout_weight="1"
             android:gravity="center" />
 

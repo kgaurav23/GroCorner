@@ -38,7 +38,7 @@ class ProductDetailFragment : Fragment() {
 
     private fun setupReviewsView() {
         val reviewsList = mutableListOf<ReviewsModel>()
-        repeat(10) {
+        repeat(3) {
             reviewsList.add(
                 ReviewsModel(
                     reviewPersonName = "Kumar Gaurav",
@@ -57,7 +57,7 @@ class ProductDetailFragment : Fragment() {
 
     private fun setupItemMayLikeView() {
         val itemMayLikeList = mutableListOf<ProductsMayLikeModel>()
-        repeat(10) {
+        repeat(3) {
             itemMayLikeList.add(
                 ProductsMayLikeModel(
                     itemName = "",
