@@ -31,5 +31,6 @@
     <string name="delivery_address">Delivery Address</string>
     <string name="order_history">Order History</string>
     <string name="logout">Logout</string>
+    <string name="summary">Summary</string>
 
 </resources>

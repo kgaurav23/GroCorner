@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/space_large" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/space_large" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/header_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/space_small"
+        app:cardElevation="@dimen/space_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/space_small"
+            android:paddingBottom="@dimen/space_large">
+
+            <ImageView
+                android:id="@+id/img_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_large"
+                android:src="@drawable/ic_menu"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:src="@drawable/grocorner"
+                app:layout_constraintEnd_toStartOf="@+id/img_search"
+                app:layout_constraintStart_toEndOf="@id/img_menu"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_large"
+                android:src="@drawable/ic_baseline_search_24"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/circle_1"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/selected_pager_dot"
+        app:layout_constraintEnd_toEndOf="@id/lbl_address"
+        app:layout_constraintStart_toStartOf="@id/lbl_address"
+        app:layout_constraintTop_toBottomOf="@id/header_view" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/circle_stroke_selected"
+        app:layout_constraintStart_toStartOf="@id/circle_1"
+        app:layout_constraintTop_toTopOf="@id/circle_1" />
+
+    <ImageView
+        android:id="@+id/circle_"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/selected_pager_dot"
+        app:layout_constraintEnd_toEndOf="@id/circle_2"
+        app:layout_constraintStart_toStartOf="@id/circle_2"
+        app:layout_constraintTop_toBottomOf="@id/header_view" />
+
+    <ImageView
+        android:id="@+id/circle_2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="36dp"
+        android:src="@drawable/circle_stroke_selected"
+        app:layout_constraintEnd_toStartOf="@+id/circle_3"
+        app:layout_constraintStart_toEndOf="@+id/circle_1"
+        app:layout_constraintTop_toBottomOf="@id/header_view" />
+
+    <ImageView
+        android:id="@+id/circle_3"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/circle_strok"
+        app:layout_constraintEnd_toEndOf="@id/lbl_summary"
+        app:layout_constraintStart_toStartOf="@id/lbl_summary"
+        app:layout_constraintTop_toBottomOf="@id/header_view" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/selected_pager_dot"
+        app:layout_constraintEnd_toEndOf="@id/circle_3"
+        app:layout_constraintStart_toStartOf="@id/circle_3"
+        app:layout_constraintTop_toBottomOf="@id/header_view" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/light_gray"
+        app:layout_constraintBottom_toBottomOf="@id/circle_1"
+        app:layout_constraintEnd_toStartOf="@id/circle_2"
+        app:layout_constraintStart_toEndOf="@+id/circle_1"
+        app:layout_constraintTop_toTopOf="@id/circle_1" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/light_gray"
+        app:layout_constraintBottom_toBottomOf="@id/circle_1"
+        app:layout_constraintEnd_toStartOf="@id/circle_3"
+        app:layout_constraintStart_toEndOf="@+id/circle_2"
+        app:layout_constraintTop_toTopOf="@id/circle_1" />
+
+    <TextView
+        android:id="@+id/lbl_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_x_small"
+        android:text="Address"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/circle_1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_x_small"
+        android:text="Payments"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/circle_2"
+        app:layout_constraintStart_toStartOf="@+id/circle_2"
+        app:layout_constraintTop_toBottomOf="@id/circle_2" />
+
+    <TextView
+        android:id="@+id/lbl_summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_x_small"
+        android:text="Summary"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintTop_toBottomOf="@id/circle_3" />
+
+    <TextView
+        android:id="@+id/lbl_product_summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/black_70"
+        android:layout_marginTop="@dimen/space_large"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/lbl_address"
+        android:text="@string/summary"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_summary_items"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_small"
+        tools:listitem="@layout/item_summary"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_product_summary" />
+
+    <View
+        android:id="@+id/separator_top"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/light_gray_30"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintTop_toBottomOf="@id/rv_summary_items"/>
+
+    <TextView
+        android:id="@+id/lbl_shipping_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/black_70"
+        android:layout_marginTop="@dimen/space_large"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/separator_top"
+        android:text="Shipping Address"/>
+
+    <TextView
+        android:id="@+id/tv_shipping_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/black_70"
+        android:layout_marginTop="@dimen/space_x_small"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/lbl_shipping_address"
+        android:text="Some long shipping address here Some long shipping address here Some long shipping address here Some long shipping address here"/>
+
+    <com.animation.animpresseffect.PressEffectButton
+        android:id="@+id/back_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/oval_shape_stroke_orange"
+        android:text="Back"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/space_2x_large"
+        android:layout_marginEnd="@dimen/space_large"
+        android:layout_marginBottom="@dimen/space_2x_large"
+        app:layout_constraintEnd_toStartOf="@+id/next_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.animation.animpresseffect.PressEffectButton
+        android:id="@+id/next_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/oval_shape_orange"
+        android:text="Back"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/space_2x_large"
+        android:layout_marginBottom="@dimen/space_2x_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
