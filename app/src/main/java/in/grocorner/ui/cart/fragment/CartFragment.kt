@@ -24,7 +24,7 @@ class CartFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         val cartList = mutableListOf<CartModel>()
-        repeat(3) {
+        repeat(10) {
             cartList.add(
                 CartModel(
                     "Rice", 2,

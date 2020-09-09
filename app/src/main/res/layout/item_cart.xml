@@ -1,70 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="135dp"
-    android:layout_marginStart="@dimen/space_xx_small"
-    android:layout_marginTop="@dimen/space_xx_small"
-    android:layout_marginEnd="@dimen/space_xx_small"
-    android:layout_marginBottom="@dimen/space_xx_small"
-    app:cardCornerRadius="@dimen/space_x_small"
-    app:cardElevation="@dimen/space_x_small"
-    app:cardPreventCornerOverlap="true"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+    android:layout_height="wrap_content"
+    tools:context=".ui.cart.fragment.CartFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/space_large" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/space_large" />
+
+    <ImageView
+        android:id="@+id/cart_item_image_iv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/item_stroke"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cart_item_name_tv"
+        style="@style/TextStyle.Black.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_large"
+        android:text="Chakki Atta"
+        app:layout_constraintStart_toEndOf="@id/cart_item_image_iv"
+        app:layout_constraintTop_toTopOf="@id/cart_item_image_iv" />
+
+    <TextView
+        android:id="@+id/cart_item_quantity_tv"
+        style="@style/TextStyle.Gray.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25 kg"
+        app:layout_constraintStart_toStartOf="@id/cart_item_name_tv"
+        app:layout_constraintBottom_toBottomOf="@id/cart_item_image_iv" />
+
+    <TextView
+        android:id="@+id/cart_item_price_tv"
+        style="@style/TextStyle.Orange.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹470"
+        android:textColor="@color/dusky_blue"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintTop_toTopOf="@id/cart_item_image_iv" />
+
+    <in.grocorner.ui.customviews.AddToCartButton
+        android:id="@+id/item_count_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/cart_item_image_iv"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="@dimen/space_x_small"
-        tools:context=".ui.cart.fragment.CartFragment">
+        android:layout_height="1dp"
+        android:background="@color/light_gray_30"
+        android:layout_marginTop="@dimen/space_large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cart_item_image_iv"/>
 
-        <ImageView
-            android:id="@+id/cart_item_image_iv"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ic_payment"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/cart_item_name_tv"
-            style="@style/TextStyle.Black.Medium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/space_large"
-            android:text="Chakki Atta"
-            app:layout_constraintStart_toEndOf="@id/cart_item_image_iv"
-            app:layout_constraintTop_toTopOf="@id/cart_item_image_iv" />
-
-        <TextView
-            android:id="@+id/cart_item_quantity_tv"
-            style="@style/TextStyle.Gray.Medium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="25 kg"
-            app:layout_constraintStart_toStartOf="@id/cart_item_name_tv"
-            app:layout_constraintBottom_toBottomOf="@id/cart_item_image_iv" />
-
-        <TextView
-            android:id="@+id/cart_item_price_tv"
-            style="@style/TextStyle.Orange.Medium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="₹470"
-            android:textColor="@color/dusky_blue"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/cart_item_image_iv" />
-
-        <in.grocorner.ui.customviews.AddToCartButton
-            android:id="@+id/item_count_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@id/cart_item_image_iv"
-            app:layout_constraintEnd_toEndOf="@id/cart_item_price_tv" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

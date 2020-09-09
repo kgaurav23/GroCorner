@@ -22,13 +22,66 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintGuide_end="@dimen/space_small" />
 
-    <ScrollView
-        android:id="@+id/cart_scroll_container"
-        android:layout_width="0dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/header_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/space_small"
+        app:cardElevation="@dimen/space_small"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/space_small"
+            android:paddingBottom="@dimen/space_large">
+
+            <ImageView
+                android:id="@+id/img_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_large"
+                android:src="@drawable/ic_menu"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:src="@drawable/grocorner"
+                app:layout_constraintEnd_toStartOf="@+id/img_search"
+                app:layout_constraintStart_toEndOf="@id/img_menu"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_large"
+                android:src="@drawable/ic_baseline_search_24"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/cart_scroll_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/space_large"
+        android:layout_marginTop="@dimen/space_large"
+        app:layout_constraintBottom_toTopOf="@+id/continue_shopping_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_view">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -55,9 +108,14 @@
                 android:id="@+id/cart_rv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_cart" />
 
             <EditText
                 android:id="@+id/promo_code_et"
@@ -128,7 +186,7 @@
                 app:layout_constraintTop_toBottomOf="@id/delivery_fee_tv" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
     <com.animation.animpresseffect.PressEffectButton
         android:id="@+id/checkout_button"
@@ -139,6 +197,7 @@
         android:fontFamily="@font/montserrat"
         android:paddingStart="@dimen/space_large"
         android:paddingEnd="@dimen/space_large"
+        android:layout_marginBottom="@dimen/space_large"
         android:text="Checkout"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -154,6 +213,7 @@
         android:fontFamily="@font/montserrat"
         android:paddingStart="@dimen/space_large"
         android:paddingEnd="@dimen/space_large"
+        android:layout_marginBottom="@dimen/space_large"
         android:text="Continue Shopping"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"

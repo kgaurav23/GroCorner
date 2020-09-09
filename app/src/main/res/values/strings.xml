@@ -17,7 +17,7 @@
     <string name="on_boarding_delivery_sub_header">Within our dedicated delivery partner you\'ll get your items fast</string>
     <string name="on_boarding_get_started_text">Get Started</string>
 
-    <string name="add_to_cart">Add to Cart</string>
+    <string name="add_to_cart">Add</string>
     <string name="decrement">-</string>
     <string name="increment">+</string>
     <string name="home">Home</string>
