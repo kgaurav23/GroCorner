@@ -1,5 +1,6 @@
 package `in`.grocorner.view.navigator
 
+import `in`.grocorner.view.PHONE_NUMBER
 import `in`.grocorner.view.home.activity.HomeActivity
 import `in`.grocorner.view.launch.activity.OnBoardingActivity
 import `in`.grocorner.view.login.activity.LoginActivity
@@ -13,8 +14,12 @@ object AppNavigator {
         context.startActivity(Intent(context, OnBoardingActivity::class.java))
     }
 
-    fun navigateToOTPActivity(context: Context) {
-        context.startActivity(Intent(context, OTPActivity::class.java))
+    fun navigateToOTPActivity(context: Context, phoneNumber: String) {
+        val intent = Intent(context, OTPActivity::class.java).apply {
+            putExtra(PHONE_NUMBER, phoneNumber)
+        }
+
+        context.startActivity(intent)
     }
 
     fun navigateToHomeActivity(context: Context) {

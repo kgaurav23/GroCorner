@@ -36,18 +36,17 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
         mobile_number_input.error = errorMessage
     }
 
-    override fun navigateToOtpActivity() {
-        AppNavigator.navigateToOTPActivity(this)
+    override fun navigateToOtpActivity(phoneNumber: String) {
+        AppNavigator.navigateToOTPActivity(this, phoneNumber)
     }
 
     private fun observeViewModel() {
         loginViewModel.validationState.observe(this, Observer {
             if(it.isValid) {
-                navigateToOtpActivity()
+                navigateToOtpActivity(mobile_number_edit_text.text.toString())
             }else {
                 mobile_number_input.error = it.msg
             }
         })
     }
 }
-

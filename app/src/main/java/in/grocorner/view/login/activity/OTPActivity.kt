@@ -1,6 +1,8 @@
 package `in`.grocorner.view.login.activity
 
 import `in`.grocorner.R
+import `in`.grocorner.view.PHONE_NUMBER
+import `in`.grocorner.view.login.contract.OTPContract
 import `in`.grocorner.view.navigator.AppNavigator
 import `in`.grocorner.viewmodel.OTPViewModel
 import android.os.Bundle
@@ -9,7 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.activity_otp.*
 
-class OTPActivity : AppCompatActivity() {
+class OTPActivity : AppCompatActivity(), OTPContract.View {
 
     private lateinit var otpViewModel: OTPViewModel
 
@@ -17,22 +19,42 @@ class OTPActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_otp)
 
+        val phoneNumber = intent.getStringExtra(PHONE_NUMBER) ?: ""
+
         window.statusBarColor = ContextCompat.getColor(this, R.color.colorPrimaryDark)
 
         otpViewModel = ViewModelProvider(this).get(OTPViewModel::class.java)
+        otpViewModel.sendOTP(phoneNumber)
+
         observeViewModel()
 
         login_using_otp_button.setOnClickListener {
-            otpViewModel.validateOTP()
+            //otpViewModel.validateOTP()
         }
     }
 
+    override fun showLoader() {
+
+    }
+
+    override fun hideLoader() {
+
+    }
+
+    override fun showError(msg: String) {
+
+    }
+
+    override fun hideError() {
+
+    }
+
     private fun observeViewModel() {
-//        otpViewModel.validationErrorMessage.observe(this, { errorMessage ->
+//        otpViewModel.validationErrorMessage.observe(this, Observer { errorMessage ->
 //
 //        })
 //
-//        otpViewModel.showLoader.observe(this, { showLoader ->
+//        otpViewModel.showLoader.observe(this, Observer { showLoader ->
 //            if (showLoader) {
 //                // show loader
 //            } else {
@@ -40,11 +62,11 @@ class OTPActivity : AppCompatActivity() {
 //            }
 //        })
 //
-//        otpViewModel.serverErrorMessage.observe(this, { errorMessage ->
+//        otpViewModel.serverErrorMessage.observe(this, Observer { errorMessage ->
 //
 //        })
 //
-//        otpViewModel.loginComplete.observe(this, { _ ->
+//        otpViewModel.loginComplete.observe(this, Observer { _ ->
 //            navigateToHomeScreen()
 //        })
     }

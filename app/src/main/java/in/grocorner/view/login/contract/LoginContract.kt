@@ -4,7 +4,7 @@ interface LoginContract {
 
     interface View {
         fun showMobileErrorMessage(errorMessage: String)
-        fun navigateToOtpActivity()
+        fun navigateToOtpActivity(phoneNumber: String)
     }
 
     interface LoginVM {

@@ -12,9 +12,9 @@ import java.util.concurrent.TimeUnit
 
 object NetworkProvider {
 
-    fun getApiService(context: Context): Service {
+    fun getApiService(context: Context): NetworkService {
         val retrofit = getRetrofit(context)
-        return retrofit.create(Service::class.java)
+        return retrofit.create(NetworkService::class.java)
     }
 
     private fun getOkHttpBuilder(context: Context): OkHttpClient.Builder {

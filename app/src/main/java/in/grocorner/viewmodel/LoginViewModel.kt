@@ -4,12 +4,11 @@ import `in`.grocorner.R
 import `in`.grocorner.view.login.contract.LoginContract
 import `in`.grocorner.viewmodel.uistate.StatePhoneValidation
 import android.app.Application
-import android.content.Context
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import java.util.regex.Pattern
 
-class LoginViewModel(application: Application) : AndroidViewModel(application),
+class LoginViewModel(val app: Application) : AndroidViewModel(app),
     LoginContract.LoginVM {
 
     val validationState = MutableLiveData<StatePhoneValidation>()
@@ -33,5 +32,5 @@ class LoginViewModel(application: Application) : AndroidViewModel(application),
         return pattern.matcher(mobileNumber).matches()
     }
 
-    private fun getValidationMsg(id: Int) = (getApplication() as Context).getString(id)
+    private fun getValidationMsg(id: Int) = app.getString(id)
 }
