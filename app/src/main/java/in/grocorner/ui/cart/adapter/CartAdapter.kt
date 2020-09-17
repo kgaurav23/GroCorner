@@ -1,7 +1,7 @@
 package `in`.grocorner.ui.cart.adapter
 
 import `in`.grocorner.R
-import `in`.grocorner.ui.cart.model.CartModel
+import `in`.grocorner.ui.database.cart.Cart
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class CartAdapter(
     val context: Context,
-    private val cartList: List<CartModel>
+    private val cartList: List<Cart>
 ) :
     RecyclerView.Adapter<CartVH>() {
 

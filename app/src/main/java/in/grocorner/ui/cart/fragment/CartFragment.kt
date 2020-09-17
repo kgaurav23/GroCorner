@@ -2,7 +2,7 @@ package `in`.grocorner.ui.cart.fragment
 
 import `in`.grocorner.R
 import `in`.grocorner.ui.cart.adapter.CartAdapter
-import `in`.grocorner.ui.cart.model.CartModel
+import `in`.grocorner.ui.database.cart.Cart
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,10 +24,10 @@ class CartFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val cartList = mutableListOf<CartModel>()
+        val cartList = mutableListOf<Cart>()
         repeat(10) {
             cartList.add(
-                CartModel(
+                Cart(
                     "Rice", 2,
                     "https://image.shutterstock.com/image-photo/fried-rice-chicken-prepared-served-600w-724814776.jpg",
                     300f
