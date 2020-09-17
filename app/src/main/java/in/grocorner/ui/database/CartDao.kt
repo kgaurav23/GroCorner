@@ -1,5 +1,6 @@
-package `in`.grocorner.ui.database.cart
+package `in`.grocorner.ui.database
 
+import `in`.grocorner.ui.cart.model.Cart
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy

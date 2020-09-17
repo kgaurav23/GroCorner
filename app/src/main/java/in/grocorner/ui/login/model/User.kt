@@ -1,4 +1,4 @@
-package `in`.grocorner.ui.database.user
+package `in`.grocorner.ui.login.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

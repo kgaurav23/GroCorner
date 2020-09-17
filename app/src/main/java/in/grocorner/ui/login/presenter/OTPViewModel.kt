@@ -1,7 +1,7 @@
 package `in`.grocorner.ui.login.presenter
 
 import `in`.grocorner.ui.database.GroCornerDatabase
-import `in`.grocorner.ui.database.user.User
+import `in`.grocorner.ui.login.model.User
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData

@@ -1,7 +1,7 @@
 package `in`.grocorner.ui.cart.adapter
 
 import `in`.grocorner.R
-import `in`.grocorner.ui.database.cart.Cart
+import `in`.grocorner.ui.cart.model.Cart
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View

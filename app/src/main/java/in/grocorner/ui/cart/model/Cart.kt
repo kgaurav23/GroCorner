@@ -1,4 +1,4 @@
-package `in`.grocorner.ui.database.cart
+package `in`.grocorner.ui.cart.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

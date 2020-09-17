@@ -1,9 +1,7 @@
 package `in`.grocorner.ui.database
 
-import `in`.grocorner.ui.database.cart.Cart
-import `in`.grocorner.ui.database.cart.CartDao
-import `in`.grocorner.ui.database.user.User
-import `in`.grocorner.ui.database.user.UserDao
+import `in`.grocorner.ui.cart.model.Cart
+import `in`.grocorner.ui.login.model.User
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
