@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="in.grocorner.ui.home.fragments.HomeFragment"
+        android:name="in.grocorner.view.home.fragments.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/categoryListFragment"
-        android:name="in.grocorner.ui.home.fragments.CategoryListFragment"
+        android:name="in.grocorner.view.home.fragments.CategoryListFragment"
         android:label="CategoryListFragment"
         tools:layout="@layout/fragment_category_list" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/productDetailFragment"
-        android:name="in.grocorner.ui.product_detail.fragment.ProductDetailFragment"
+        android:name="in.grocorner.view.product_detail.fragment.ProductDetailFragment"
         android:label="ProductDetailFragment"
         tools:layout="@layout/fragment_product_detail">
         <argument
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/categoryProductsFragment"
-        android:name="in.grocorner.ui.category_products.fragment.CategoryProductsFragment"
+        android:name="in.grocorner.view.category_products.fragment.CategoryProductsFragment"
         android:label="CategoryProductsFragment"
         tools:layout="@layout/fragment_category_products">
         <argument
@@ -46,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/cartFragment"
-        android:name="in.grocorner.ui.cart.fragment.CartFragment"
+        android:name="in.grocorner.view.cart.fragment.CartFragment"
         android:label="CartFragment"
         tools:layout="@layout/fragment_cart" >
         <action
@@ -55,12 +55,12 @@
     </fragment>
     <fragment
         android:id="@+id/orderConfirmationFragment"
-        android:name="in.grocorner.ui.order_confirmation.fragment.OrderConfirmationFragment"
+        android:name="in.grocorner.view.order_confirmation.fragment.OrderConfirmationFragment"
         android:label="OrderConfirmationFragment"
         tools:layout="@layout/fragment_order_confirmation" />
     <fragment
         android:id="@+id/addressFragment"
-        android:name="in.grocorner.ui.payment.fragment.AddressFragment"
+        android:name="in.grocorner.view.payment.fragment.AddressFragment"
         tools:layout="@layout/fragment_address"
         android:label="AddressFragment" >
         <action
@@ -69,7 +69,7 @@
     </fragment>
     <fragment
         android:id="@+id/summaryFragment"
-        android:name="in.grocorner.ui.payment.fragment.SummaryFragment"
+        android:name="in.grocorner.view.payment.fragment.SummaryFragment"
         tools:layout="@layout/fragment_summary"
         android:label="SummaryFragment" >
         <action

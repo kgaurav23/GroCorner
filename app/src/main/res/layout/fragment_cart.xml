@@ -86,7 +86,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:context=".ui.category_products.fragment.CategoryProductsFragment">
+            tools:context=".view.category_products.fragment.CategoryProductsFragment">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline_start"

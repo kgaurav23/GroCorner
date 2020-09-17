@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ui.cart.fragment.CartFragment">
+    tools:context=".view.cart.fragment.CartFragment">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_start"
@@ -59,7 +59,7 @@
         app:layout_constraintEnd_toEndOf="@id/guideline_end"
         app:layout_constraintTop_toTopOf="@id/cart_item_image_iv" />
 
-    <in.grocorner.ui.customviews.AddToCartButton
+    <in.grocorner.view.customviews.AddToCartButton
         android:id="@+id/item_count_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

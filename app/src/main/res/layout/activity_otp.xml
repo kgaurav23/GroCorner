@@ -85,7 +85,7 @@
                 app:layout_constraintStart_toStartOf="@id/txt_sign_up"
                 app:layout_constraintTop_toBottomOf="@id/txt_sign_up" />
 
-            <in.grocorner.ui.login.customview.OtpEditText
+            <in.grocorner.view.login.customview.OtpEditText
                 android:id="@+id/edit_otp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

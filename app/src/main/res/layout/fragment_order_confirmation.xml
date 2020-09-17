@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.order_confirmation.fragment.OrderConfirmationFragment">
+    tools:context=".view.order_confirmation.fragment.OrderConfirmationFragment">
 
     <ImageView
         android:id="@+id/confirmation_image_iv"
