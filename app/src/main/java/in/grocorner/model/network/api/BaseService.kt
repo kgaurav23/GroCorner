@@ -1,8 +1,6 @@
 package `in`.grocorner.model.network.api
 
-import `in`.grocorner.model.network.pojo.SendOtpRequest
-import `in`.grocorner.model.network.pojo.SendOtpResponse
-import `in`.grocorner.model.network.pojo.User
+import `in`.grocorner.model.network.pojo.*
 import retrofit2.Response
 
 interface BaseService {
@@ -13,5 +11,5 @@ interface BaseService {
     suspend fun getUser(auth: String)
     suspend fun updateUser(auth: String, userDetails: User)
     suspend fun sendOTP(request: SendOtpRequest): Response<SendOtpResponse>
-    suspend fun verifyOTP(auth: String)
+    suspend fun verifyOTP(request: ValidateOtpRequest): Response<ValidateOtpResponse>
 }

@@ -1,8 +1,6 @@
 package `in`.grocorner.model.network.api
 
-import `in`.grocorner.model.network.pojo.SendOtpRequest
-import `in`.grocorner.model.network.pojo.SendOtpResponse
-import `in`.grocorner.model.network.pojo.User
+import `in`.grocorner.model.network.pojo.*
 import retrofit2.Response
 
 class MockService : BaseService {
@@ -34,8 +32,7 @@ class MockService : BaseService {
         return Response.success(SendOtpResponse("", ""))
     }
 
-    override suspend fun verifyOTP(auth: String) {
-
+    override suspend fun verifyOTP(request: ValidateOtpRequest): Response<ValidateOtpResponse> {
+        TODO("Not yet implemented")
     }
-
 }

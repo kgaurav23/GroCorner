@@ -7,11 +7,13 @@ interface OTPContract {
         fun hideLoader()
         fun showError(msg: String)
         fun hideError()
+
+        //TODO delete it later
+        fun fillOTPFromResponse(otp: String)
     }
 
     interface OtpVM {
         fun sendOTP(phoneNumber: String)
-        fun validateOTP(otp: String)
+        fun validateOTP(otp: String, phoneNumber: String, deviceId: String)
     }
-
 }
