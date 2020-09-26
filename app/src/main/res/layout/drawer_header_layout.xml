@@ -7,8 +7,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/user_profile_image_iv"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="@dimen/space_large"
         android:src="@drawable/ic_user"
         app:civ_border_color="#FF000000"

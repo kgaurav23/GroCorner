@@ -10,11 +10,7 @@
         android:enabled="true"
         android:icon="@drawable/ic_category"
         android:title="@string/category" />
-    <item
-        android:id="@+id/menu_offer"
-        android:enabled="true"
-        android:icon="@android:drawable/ic_delete"
-        android:title="@string/offers" />
+
     <item
         android:id="@+id/cartFragment"
         android:enabled="true"

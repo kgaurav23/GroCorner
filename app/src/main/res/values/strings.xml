@@ -22,7 +22,7 @@
     <string name="decrement">-</string>
     <string name="increment">+</string>
     <string name="home">Home</string>
-    <string name="category">Category</string>
+    <string name="category">Categories</string>
     <string name="offers">Offers</string>
     <string name="cart">Cart</string>
     <string name="order_accepted_label">Order Accepted</string>

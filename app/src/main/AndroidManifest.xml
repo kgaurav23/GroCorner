@@ -16,7 +16,6 @@
         tools:ignore="AllowBackup">
 
         <activity android:name=".view.home.activity.HomeActivity" />
-
         <activity
             android:name=".view.launch.activity.SplashActivity"
             android:noHistory="true">

@@ -34,7 +34,7 @@ class OnBoardingFragment : Fragment() {
         }
 
         get_started_layout.setOnClickListener {
-            AppNavigator.navigateToLoginActivity(requireContext())
+            AppNavigator.navigateToHomeActivity(requireContext())
         }
     }
 

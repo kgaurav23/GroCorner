@@ -3,7 +3,7 @@ package `in`.grocorner.view.launch.contract
 interface SplashScreenContract {
 
     interface View {
-        fun gotoOnBoardActivity()
+        fun navigateToNextScreen()
     }
 
     interface Presenter {

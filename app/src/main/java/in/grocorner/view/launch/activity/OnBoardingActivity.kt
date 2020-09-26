@@ -1,8 +1,9 @@
 package `in`.grocorner.view.launch.activity
 
 import `in`.grocorner.R
-import `in`.grocorner.view.launch.fragment.OnBoardingFragment
 import `in`.grocorner.model.network.pojo.OnBoardingData
+import `in`.grocorner.view.launch.fragment.OnBoardingFragment
+import `in`.grocorner.view.utility.AppUtility
 import android.animation.Animator
 import android.os.Bundle
 import android.os.Handler
@@ -42,8 +43,9 @@ class OnBoardingActivity : AppCompatActivity() {
 
             override fun onAnimationStart(p0: Animator?) {
             }
-
         })
+
+        AppUtility.updateOnBoardingSettings(this)
     }
 
     override fun onBackPressed() {
