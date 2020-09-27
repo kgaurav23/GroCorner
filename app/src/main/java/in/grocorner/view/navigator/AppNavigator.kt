@@ -47,7 +47,7 @@ object AppNavigator {
     }
 
     fun navigateToStoreLocatorActivity(context: Context) {
-        val gmmIntentUri: Uri = Uri.parse("geo:0,0?q=12.9374,77.6272")
+        val gmmIntentUri: Uri = Uri.parse("geo:0,0?q=12.9374,77.6272(Grocorner Store)")
         val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
         mapIntent.setPackage("com.google.android.apps.maps")
 
