@@ -31,7 +31,16 @@
     <string name="edit_profile">Edit Profile</string>
     <string name="delivery_address">Delivery Address</string>
     <string name="order_history">Order History</string>
+    <string name="store_locator">Store Locator</string>
     <string name="logout">Logout</string>
     <string name="summary">Summary</string>
 
+    <string name="hint_name">Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_phone">Phone</string>
+
+    <string name="empty_field_error_message">Field must not be empty.</string>
+    <string name="invalid_name_error_message">Please enter valid name to proceed</string>
+    <string name="invalid_email_error_message">Please enter valid email address to proceed</string>
+    <string name="invalid_phone_error_message">Please enter valid phone number to proceed</string>
 </resources>

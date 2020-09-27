@@ -24,8 +24,8 @@ class MockService : BaseService {
 
     }
 
-    override suspend fun updateUser(auth: String, userDetails: User) {
-
+    override suspend fun updateUser(auth: String, userDetails: EditProfileRequest): Response<EditProfileResponse> {
+        TODO("Not yet implemented")
     }
 
     override suspend fun sendOTP(request: SendOtpRequest): Response<SendOtpResponse> {

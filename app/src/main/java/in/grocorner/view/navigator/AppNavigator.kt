@@ -1,7 +1,7 @@
 package `in`.grocorner.view.navigator
 
 import `in`.grocorner.view.PHONE_NUMBER
-import `in`.grocorner.view.home.activity.HomeActivity
+import `in`.grocorner.view.home.activity.*
 import `in`.grocorner.view.launch.activity.OnBoardingActivity
 import `in`.grocorner.view.login.activity.LoginActivity
 import `in`.grocorner.view.login.activity.OTPActivity
@@ -28,5 +28,21 @@ object AppNavigator {
 
     fun navigateToLoginActivity(context: Context) {
         context.startActivity(Intent(context, LoginActivity::class.java))
+    }
+
+    fun navigateToEditProfileActivity(context: Context) {
+        context.startActivity(Intent(context, EditProfileActivity::class.java))
+    }
+
+    fun navigateToDeliveryAddressActivity(context: Context) {
+        context.startActivity(Intent(context, DeliveryAddressActivity::class.java))
+    }
+
+    fun navigateToOrderHistoryActivity(context: Context) {
+        context.startActivity(Intent(context, OrderHistoryActivity::class.java))
+    }
+
+    fun navigateToStoreLocatorActivity(context: Context) {
+        context.startActivity(Intent(context, StoreLocatorActivity::class.java))
     }
 }

@@ -17,6 +17,22 @@
 
         <activity android:name=".view.home.activity.HomeActivity" />
         <activity
+            android:name=".view.home.activity.EditProfileActivity"
+            android:label="@string/edit_profile"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.home.activity.StoreLocatorActivity"
+            android:label="@string/store_locator"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.home.activity.DeliveryAddressActivity"
+            android:label="@string/delivery_address"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.home.activity.OrderHistoryActivity"
+            android:label="@string/order_history"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".view.launch.activity.SplashActivity"
             android:noHistory="true">
             <intent-filter>

@@ -34,7 +34,7 @@ interface NetworkService : BaseService {
     override suspend fun getUser(@Header(AUTHORIZATION) auth: String)
 
     @PUT(USER_ENDPOINT)
-    override suspend fun updateUser(@Header(AUTHORIZATION) auth: String, @Body userDetails: User)
+    override suspend fun updateUser(@Header(AUTHORIZATION) auth: String, @Body userDetails: EditProfileRequest): Response<EditProfileResponse>
 
     @POST(SEND_OTP_ENDPOINT)
     override suspend fun sendOTP(@Body request: SendOtpRequest): Response<SendOtpResponse>

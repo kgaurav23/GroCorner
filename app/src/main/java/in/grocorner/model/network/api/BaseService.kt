@@ -9,7 +9,7 @@ interface BaseService {
     suspend fun updateAddress(auth: String, addressId: String)
     suspend fun deleteAddress(auth: String, addressId: String)
     suspend fun getUser(auth: String)
-    suspend fun updateUser(auth: String, userDetails: User)
+    suspend fun updateUser(auth: String, userDetails: EditProfileRequest): Response<EditProfileResponse>
     suspend fun sendOTP(request: SendOtpRequest): Response<SendOtpResponse>
     suspend fun verifyOTP(request: ValidateOtpRequest): Response<ValidateOtpResponse>
 }
