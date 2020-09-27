@@ -50,7 +50,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 AppNavigator.navigateToOrderHistoryActivity(this)
             }
             R.id.storeLocator -> {
-                AppNavigator.navigateToOrderHistoryActivity(this)
+                AppNavigator.navigateToStoreLocatorActivity(this)
             }
             R.id.logOut -> {
             }
