@@ -55,6 +55,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.logOut -> {
             }
         }
+        drawer_layout.close()
         return true
     }
 }

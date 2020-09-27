@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_address"
+    app:startDestination="@id/deliveryAddressListFragment">
+    <fragment
+        android:id="@+id/deliveryAddressListFragment"
+        android:name="in.grocorner.view.home.fragments.DeliveryAddressListFragment"
+        android:label="DeliveryAddressListFragment">
+        <action
+            android:id="@+id/action_deliveryAddressListFragment_to_addNewDeliveryAddressFragment"
+            app:destination="@id/addNewDeliveryAddressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewDeliveryAddressFragment"
+        android:name="in.grocorner.view.home.fragments.AddNewDeliveryAddressFragment"
+        android:label="AddNewDeliveryAddressFragment">
+        <action
+            android:id="@+id/action_addNewDeliveryAddressFragment_to_deliveryAddressListFragment"
+            app:destination="@id/deliveryAddressListFragment"
+            app:popUpTo="@+id/deliveryAddressListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
