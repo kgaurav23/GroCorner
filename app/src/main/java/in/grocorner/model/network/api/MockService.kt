@@ -1,5 +1,6 @@
 package `in`.grocorner.model.network.api
 
+import `in`.grocorner.model.network.pojo.CategoryResponse
 import `in`.grocorner.model.network.pojo.*
 import retrofit2.Response
 
@@ -35,4 +36,9 @@ class MockService : BaseService {
     override suspend fun verifyOTP(request: ValidateOtpRequest): Response<ValidateOtpResponse> {
         TODO("Not yet implemented")
     }
+
+    override suspend fun getCategory(): Response<CategoryResponse> {
+        return Response.success(CategoryResponse(mutableListOf(), ""))
+    }
+
 }

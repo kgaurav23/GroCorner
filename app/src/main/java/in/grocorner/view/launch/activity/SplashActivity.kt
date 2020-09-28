@@ -26,7 +26,7 @@ class SplashActivity : AppCompatActivity(), SplashScreenContract.View {
         if (AppUtility.didWeShowOnBoardingScreen(this)) {
             AppNavigator.navigateToHomeActivity(this)
         } else {
-            AppNavigator.navigateToOnBoardingActivity(this)
+            AppNavigator.navigateToHomeActivity(this)
         }
     }
 }

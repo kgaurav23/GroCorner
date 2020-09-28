@@ -1,11 +1,13 @@
 package `in`.grocorner.model.network.api
 
 import `in`.grocorner.model.network.UrlConstants.Companion.AUTHORIZATION
+import `in`.grocorner.model.network.UrlConstants.Companion.CATEGORY_ENDPOINT
 import `in`.grocorner.model.network.UrlConstants.Companion.SEND_OTP_ENDPOINT
 import `in`.grocorner.model.network.UrlConstants.Companion.USER_ADDRESS_ENDPOINT
 import `in`.grocorner.model.network.UrlConstants.Companion.USER_ADDRESS_ID
 import `in`.grocorner.model.network.UrlConstants.Companion.USER_ENDPOINT
 import `in`.grocorner.model.network.UrlConstants.Companion.VERIFY_OTP_ENDPOINT
+import `in`.grocorner.model.network.pojo.CategoryResponse
 import `in`.grocorner.model.network.pojo.*
 import retrofit2.Response
 import retrofit2.http.*
@@ -41,4 +43,8 @@ interface NetworkService : BaseService {
 
     @POST(VERIFY_OTP_ENDPOINT)
     override suspend fun verifyOTP(@Body request: ValidateOtpRequest): Response<ValidateOtpResponse>
+
+    @GET(CATEGORY_ENDPOINT)
+    override suspend fun getCategory(): Response<CategoryResponse>
+
 }
